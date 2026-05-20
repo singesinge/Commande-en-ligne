@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mon compte — Stack House</title>
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <nav class="sh-nav" aria-label="Navigation principale">
+    <a class="sh-nav__brand" href="index.html" aria-label="Accueil Stack House">
+      <span class="sh-nav__logo">SH</span>
+      <span><span class="sh-nav__brand-text">STACK HOUSE</span><br/><span class="sh-nav__brand-sub">METS CE QUE TU VEUX</span></span>
+    </a>
+    <div class="sh-nav__cta">
+      <span class="sh-chip sh-nav__cta-zone"><i class="fa-solid fa-location-dot"></i> 69002 LYON · 22 MIN</span>
+      <a href="compte.html" class="sh-btn sh-btn--sm sh-nav__cta-account is-active"><i class="fa-regular fa-user"></i> COMPTE</a>
+      <a href="panier.html" class="sh-btn sh-btn--sm sh-btn--primary"><i class="fa-solid fa-bag-shopping"></i> <span id="cartCount">3</span> · 28,90 €</a>
+    </div>
+  </nav>
+
+  <section class="sh-wrap sh-account-grid">
+    <!-- SIDEBAR -->
+    <aside>
+      <div class="sh-card sh-side">
+        <div style="display:flex;gap:12px;align-items:center;">
+          <div class="sh-side__avatar">L</div>
+          <div>
+            <h2 class="sh-side__name">SALUT LÉO</h2>
+            <span class="sh-mono" style="font-size:10px;letter-spacing:.14em;color:var(--sh-text-muted);">★ 12 STACKS · MEMBRE 2026</span>
+          </div>
+        </div>
+        <nav class="sh-side__nav">
+          <a href="compte.html" class="is-active"><i class="fa-regular fa-user"></i> PROFIL</a>
+          <a href="historique.html"><i class="fa-regular fa-clock"></i> MES COMMANDES</a>
+          <a href="#"><i class="fa-regular fa-heart"></i> MES STACKS SAUVEGARDÉS</a>
+          <a href="#"><i class="fa-solid fa-location-dot"></i> ADRESSES</a>
+          <a href="#"><i class="fa-regular fa-credit-card"></i> PAIEMENT</a>
+          <a href="#"><i class="fa-solid fa-sliders"></i> PRÉFÉRENCES</a>
+        </nav>
+      </div>
+    </aside>
+
+    <main>
+      <span class="sh-tag">09 · TON COMPTE</span>
+      <h1 style="font-family:var(--sh-font-display);font-size:clamp(36px,5vw,56px);margin:4px 0 0;">PROFIL.</h1>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px;">
+        <div class="sh-card" style="padding:18px;">
+          <span class="sh-mono" style="font-size:10px;letter-spacing:.16em;color:var(--sh-text-muted);">INFOS</span>
+          <div style="margin-top:12px;">
+            <div style="font-size:14px;"><b>Léo Martin</b></div>
+            <div style="font-size:13px;color:var(--sh-text-muted);">leo@example.fr</div>
+            <div style="font-size:13px;color:var(--sh-text-muted);">06 12 34 56 78</div>
+          </div>
+          <button class="sh-btn sh-btn--sm" style="margin-top:14px;">MODIFIER</button>
+        </div>
+
+        <div class="sh-card sh-card--dark" style="padding:18px;">
+          <span class="sh-mono" style="font-size:10px;letter-spacing:.16em;color:var(--sh-mustard);">STATUT · STACK CLUB</span>
+          <h3 style="font-family:var(--sh-font-display);font-size:28px;color:var(--sh-cream);margin:6px 0 0;">★ HUNGRY</h3>
+          <p style="font-size:12px;opacity:.85;margin:4px 0 0;">Encore 3 commandes pour passer « STACKER ».</p>
+          <div style="height:8px;background:var(--sh-ink-2);border-radius:999px;margin-top:14px;overflow:hidden;border:1.5px solid var(--sh-cream);">
+            <div style="width:60%;height:100%;background:var(--sh-mustard);"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Saved stacks -->
+      <div style="margin-top:28px;">
+        <h2 style="font-family:var(--sh-font-display);font-size:26px;margin:0 0 12px;">TES STACKS SAUVEGARDÉS</h2>
+        <div class="sh-stack-mini">
+          <div class="sh-card">
+            <h3 style="font-family:var(--sh-font-display);font-size:20px;margin:0;">« THE LOUD »</h3>
+            <p style="font-size:12px;color:var(--sh-text-muted);margin:4px 0 0;min-height:36px;">Brioché · 2 steaks · cheddar ×2 · bacon · neon</p>
+            <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;">
+              <button class="sh-btn sh-btn--sm sh-btn--primary" style="padding:4px 10px;font-size:11px;">RE-COMMANDER</button>
+              <button class="sh-btn sh-btn--sm" style="padding:4px 10px;font-size:11px;">MODIFIER</button>
+            </div>
+          </div>
+          <div class="sh-card">
+            <h3 style="font-family:var(--sh-font-display);font-size:20px;margin:0;">« BREAKFAST KING »</h3>
+            <p style="font-size:12px;color:var(--sh-text-muted);margin:4px 0 0;min-height:36px;">Œuf · bacon · cheddar · hash brown · maison</p>
+            <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;">
+              <button class="sh-btn sh-btn--sm sh-btn--primary" style="padding:4px 10px;font-size:11px;">RE-COMMANDER</button>
+              <button class="sh-btn sh-btn--sm" style="padding:4px 10px;font-size:11px;">MODIFIER</button>
+            </div>
+          </div>
+          <div class="sh-card">
+            <h3 style="font-family:var(--sh-font-display);font-size:20px;margin:0;">« GREEN BOMB »</h3>
+            <p style="font-size:12px;color:var(--sh-text-muted);margin:4px 0 0;min-height:36px;">Champignon · avocat · pickles · sauce verte</p>
+            <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;">
+              <button class="sh-btn sh-btn--sm sh-btn--primary" style="padding:4px 10px;font-size:11px;">RE-COMMANDER</button>
+              <button class="sh-btn sh-btn--sm" style="padding:4px 10px;font-size:11px;">MODIFIER</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </section>
+
+  <footer class="sh-footer">
+    <div class="sh-footer__grid">
+      <div><a class="sh-footer__logo" href="index.html" aria-label="Retour à l'accueil">STACK<br/>HOUSE</a><div class="sh-mono" style="margin-top:8px;letter-spacing:.16em;opacity:.85;">METS CE QUE TU VEUX · DEPUIS 2026</div></div>
+      <div><h4>LE DINER</h4><ul><li>12 rue Mercière</li><li>69002 Lyon</li></ul></div>
+      <div><h4>CONTACT</h4><ul><li><a href="mailto:hello@stackhouse.fr">hello@stackhouse.fr</a></li></ul></div>
+      <div><h4>MENTIONS</h4><ul><li><a href="#">CGU</a></li></ul></div>
+    </div>
+    <hr class="sh-hr-dashed" style="border-color:var(--sh-cream);opacity:.4;margin:32px 0 18px;" />
+    <div class="sh-footer__bottom"><span>© 2026 STACK HOUSE</span><span>★ NO BS ★</span></div>
+  </footer>
+
+  <script src="js/nav.js" defer></script>
+</body>
+</html>

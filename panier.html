@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Panier — Stack House</title>
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <nav class="sh-nav" aria-label="Navigation principale">
+    <a class="sh-nav__brand" href="index.html" aria-label="Accueil Stack House">
+      <span class="sh-nav__logo">SH</span>
+      <span><span class="sh-nav__brand-text">STACK HOUSE</span><br/><span class="sh-nav__brand-sub">METS CE QUE TU VEUX</span></span>
+    </a>
+    <div class="sh-nav__cta">
+      <span class="sh-chip sh-nav__cta-zone"><i class="fa-solid fa-location-dot"></i> 69002 LYON · 22 MIN</span>
+      <a href="compte.html" class="sh-btn sh-btn--sm sh-nav__cta-account"><i class="fa-regular fa-user"></i> COMPTE</a>
+      <a href="panier.html" class="sh-btn sh-btn--sm sh-btn--primary"><i class="fa-solid fa-bag-shopping"></i> <span id="cartCount">3</span> · 28,90 €</a>
+    </div>
+  </nav>
+
+  <!-- BANNER -->
+  <section class="sh-wrap sh-banner">
+    <div class="sh-banner__row">
+      <div>
+        <span class="sh-tag">06 · TON PANIER</span>
+        <h1><span id="bannerCount">3</span> STACKS<span class="sh-dot">.</span></h1>
+      </div>
+      <div class="sh-mono" style="font-size:12px;color:var(--sh-text-muted);letter-spacing:.16em;text-align:right;">
+        <i class="fa-regular fa-clock"></i> LIVRAISON ESTIMÉE · 22 MIN<br/>
+        <i class="fa-solid fa-location-dot"></i> 12 RUE MERCIÈRE, 69002 LYON
+      </div>
+    </div>
+  </section>
+
+  <section class="sh-wrap sh-cart-grid">
+    <!-- LIGNES -->
+    <div style="display:flex;flex-direction:column;gap:14px;" id="cartList">
+      <!-- Lignes par défaut (overwrite par JS si localStorage présent) -->
+      <article class="sh-line">
+        <div class="sh-line__media">
+          <img src="img/image.png" alt="The Loud" />
+        </div>
+        <div class="sh-line__body">
+          <h3 class="sh-line__title">« THE LOUD » <span class="sh-chip sh-chip--neon" style="font-size:9px;">★ TON STACK</span></h3>
+          <p class="sh-line__sub">Brioché · 2 steaks · cheddar ×2 · bacon · salade · tomate · neon</p>
+          <div class="sh-line__mods"><span class="sh-chip" style="font-size:10px;padding:2px 8px;">Saignant</span><span class="sh-chip" style="font-size:10px;padding:2px 8px;">Sans pickles</span><span class="sh-chip" style="font-size:10px;padding:2px 8px;">+ Bacon</span></div>
+          <div class="sh-line__actions">
+            <button class="sh-btn sh-btn--ghost sh-btn--sm" style="padding:4px 10px;"><i class="fa-solid fa-pen"></i> MODIFIER</button>
+            <button class="sh-btn sh-btn--ghost sh-btn--sm" style="padding:4px 10px;">DUPLIQUER</button>
+            <button class="sh-btn sh-btn--ghost sh-btn--sm" style="padding:4px 10px;color:var(--sh-error);"><i class="fa-regular fa-trash-can"></i> RETIRER</button>
+          </div>
+        </div>
+        <div class="sh-line__qty">
+          <div class="sh-stepper"><button aria-label="-"><i class="fa-solid fa-minus"></i></button><span class="sh-stepper__value">01</span><button aria-label="+"><i class="fa-solid fa-plus"></i></button></div>
+          <span class="sh-line__price">14,90 €</span>
+        </div>
+      </article>
+
+      <article class="sh-line">
+        <div class="sh-line__media">
+          <img src="img/image.png" alt="The Birdie" />
+        </div>
+        <div class="sh-line__body">
+          <h3 class="sh-line__title">THE BIRDIE</h3>
+          <p class="sh-line__sub">Poulet pané · coleslaw · buffalo · pickles</p>
+          <div class="sh-line__mods"><span class="sh-chip" style="font-size:10px;padding:2px 8px;">Bien cuit</span></div>
+          <div class="sh-line__actions">
+            <button class="sh-btn sh-btn--ghost sh-btn--sm" style="padding:4px 10px;"><i class="fa-solid fa-pen"></i> MODIFIER</button>
+            <button class="sh-btn sh-btn--ghost sh-btn--sm" style="padding:4px 10px;">DUPLIQUER</button>
+            <button class="sh-btn sh-btn--ghost sh-btn--sm" style="padding:4px 10px;color:var(--sh-error);"><i class="fa-regular fa-trash-can"></i> RETIRER</button>
+          </div>
+        </div>
+        <div class="sh-line__qty">
+          <div class="sh-stepper"><button><i class="fa-solid fa-minus"></i></button><span class="sh-stepper__value">02</span><button><i class="fa-solid fa-plus"></i></button></div>
+          <span class="sh-line__price">29,80 €</span>
+        </div>
+      </article>
+
+      <article class="sh-line">
+        <div class="sh-line__media" style="background:var(--sh-pickle);">
+          <img src="img/image.png" alt="Fries" />
+        </div>
+        <div class="sh-line__body">
+          <h3 class="sh-line__title">FRIES MAISON</h3>
+          <p class="sh-line__sub">Pommes de terre · sel fumé · grand format</p>
+          <div class="sh-line__actions">
+            <button class="sh-btn sh-btn--ghost sh-btn--sm" style="padding:4px 10px;color:var(--sh-error);"><i class="fa-regular fa-trash-can"></i> RETIRER</button>
+          </div>
+        </div>
+        <div class="sh-line__qty">
+          <div class="sh-stepper"><button><i class="fa-solid fa-minus"></i></button><span class="sh-stepper__value">01</span><button><i class="fa-solid fa-plus"></i></button></div>
+          <span class="sh-line__price">4,50 €</span>
+        </div>
+      </article>
+
+      <!-- CROSS-SELL -->
+      <div style="margin-top:20px;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap;">
+          <h2 style="font-family:var(--sh-font-display);font-size:28px;margin:0;">ON COMPLÈTE ?</h2>
+          <span class="sh-mono" style="font-size:11px;color:var(--sh-text-muted);letter-spacing:.14em;">↳ SUGGESTIONS BASÉES SUR TA COMMANDE</span>
+        </div>
+        <div class="sh-pgrid sh-pgrid--4">
+          <article class="sh-pcard sh-pcard--drink sh-pcard--compact">
+            <div class="sh-pcard__media"><img src="img/image.png" alt="Rootbeer" /></div>
+            <div class="sh-pcard__body">
+              <span class="sh-pcard__tag">VA AVEC</span>
+              <h3 class="sh-pcard__title">ROOTBEER</h3>
+              <p class="sh-pcard__desc">50cl maison</p>
+              <div class="sh-pcard__foot"><span class="sh-pcard__price">3,50 €</span><button class="sh-pcard__add">+</button></div>
+            </div>
+          </article>
+          <article class="sh-pcard sh-pcard--fries sh-pcard--compact">
+            <div class="sh-pcard__media"><img src="img/image.png" alt="Onion rings" /></div>
+            <div class="sh-pcard__body">
+              <span class="sh-pcard__tag">VA AVEC</span>
+              <h3 class="sh-pcard__title">ONION RINGS</h3>
+              <p class="sh-pcard__desc">Croustillants</p>
+              <div class="sh-pcard__foot"><span class="sh-pcard__price">4,50 €</span><button class="sh-pcard__add">+</button></div>
+            </div>
+          </article>
+          <article class="sh-pcard sh-pcard--sauce sh-pcard--compact">
+            <div class="sh-pcard__media"><img src="img/image.png" alt="2 sauces" /></div>
+            <div class="sh-pcard__body">
+              <span class="sh-pcard__tag">EXTRA</span>
+              <h3 class="sh-pcard__title">2 SAUCES</h3>
+              <p class="sh-pcard__desc">À choisir</p>
+              <div class="sh-pcard__foot"><span class="sh-pcard__price">1,00 €</span><button class="sh-pcard__add">+</button></div>
+            </div>
+          </article>
+          <article class="sh-pcard sh-pcard--dessert sh-pcard--compact">
+            <div class="sh-pcard__media"><img src="img/image.png" alt="Cookie" /></div>
+            <div class="sh-pcard__body">
+              <span class="sh-pcard__tag">DESSERT</span>
+              <h3 class="sh-pcard__title">COOKIE CHOCO</h3>
+              <p class="sh-pcard__desc">Cuit à la commande</p>
+              <div class="sh-pcard__foot"><span class="sh-pcard__price">3,90 €</span><button class="sh-pcard__add">+</button></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <!-- RÉSUMÉ -->
+    <aside>
+      <div class="sh-card sh-summary">
+        <span class="sh-tag">RÉSUMÉ</span>
+        <h2 class="sh-summary__title">TOTAL</h2>
+
+        <div class="sh-summary__rows">
+          <div><span class="k">Sous-total · 3 articles</span><span class="v">34,30 €</span></div>
+          <div><span class="k">Frais de livraison</span><span class="v">2,90 €</span></div>
+          <div><span class="k">Couverts (offert)</span><span class="v">0,00 €</span></div>
+          <div><span class="k">Code « FIRSTSTACK »</span><span class="v" style="color:var(--sh-success)">−5,00 €</span></div>
+        </div>
+
+        <hr class="sh-hr-dashed" style="margin:18px 0;" />
+
+        <div class="sh-summary__total">
+          <span class="sh-bungee" style="font-size:14px;">À PAYER</span>
+          <span class="num">32,20 €</span>
+        </div>
+
+        <div class="sh-promo">
+          <input class="sh-input" placeholder="CODE PROMO" style="padding:8px 12px;font-size:12px;" />
+          <button class="sh-btn sh-btn--sm">OK</button>
+        </div>
+
+        <div style="margin-top:16px;padding:12px;background:var(--sh-mustard);border:2px solid var(--sh-ink);border-radius:10px;">
+          <span class="sh-mono" style="font-size:10px;letter-spacing:.16em;">LIVRAISON · 22 MIN</span>
+          <div style="font-size:12px;margin-top:4px;">12 rue Mercière, 69002 Lyon — <a href="#" style="text-decoration:underline;">changer</a></div>
+        </div>
+
+        <a href="checkout.html" class="sh-btn sh-btn--primary sh-btn--block" style="margin-top:16px;font-size:14px;padding:14px;">PASSER LA COMMANDE <i class="fa-solid fa-arrow-right"></i></a>
+        <p class="sh-mono" style="font-size:10px;letter-spacing:.16em;color:var(--sh-text-muted);text-align:center;margin:10px 0 0;">★ PAS DE COMPTE OBLIGATOIRE</p>
+      </div>
+    </aside>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="sh-footer">
+    <div class="sh-footer__grid">
+      <div><a class="sh-footer__logo" href="index.html" aria-label="Retour à l'accueil">STACK<br/>HOUSE</a><div class="sh-mono" style="margin-top:8px;letter-spacing:.16em;opacity:.85;">METS CE QUE TU VEUX · DEPUIS 2026</div></div>
+      <div><h4>LE DINER</h4><ul><li>12 rue Mercière</li><li>69002 Lyon</li><li>11h30 → 23h00</li></ul></div>
+      <div><h4>CONTACT</h4><ul><li><a href="mailto:hello@stackhouse.fr">hello@stackhouse.fr</a></li><li>+33 4 78 00 00 00</li></ul></div>
+      <div><h4>MENTIONS</h4><ul><li><a href="#">CGU</a></li><li><a href="#">Cookies</a></li><li><a href="#">Allergènes</a></li></ul></div>
+    </div>
+    <hr class="sh-hr-dashed" style="border-color:var(--sh-cream);opacity:.4;margin:32px 0 18px;" />
+    <div class="sh-footer__bottom"><span>© 2026 STACK HOUSE</span><span>★ NO BS ★</span></div>
+  </footer>
+
+  <script src="js/nav.js" defer></script>
+  <script src="js/cart.js" defer></script>
+</body>
+</html>

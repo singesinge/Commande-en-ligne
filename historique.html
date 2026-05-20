@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Historique — Stack House</title>
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <nav class="sh-nav" aria-label="Navigation principale">
+    <a class="sh-nav__brand" href="index.html" aria-label="Accueil Stack House">
+      <span class="sh-nav__logo">SH</span>
+      <span><span class="sh-nav__brand-text">STACK HOUSE</span><br/><span class="sh-nav__brand-sub">METS CE QUE TU VEUX</span></span>
+    </a>
+    <div class="sh-nav__cta">
+      <span class="sh-chip sh-nav__cta-zone"><i class="fa-solid fa-location-dot"></i> 69002 LYON · 22 MIN</span>
+      <a href="compte.html" class="sh-btn sh-btn--sm sh-nav__cta-account"><i class="fa-regular fa-user"></i> COMPTE</a>
+      <a href="panier.html" class="sh-btn sh-btn--sm sh-btn--primary"><i class="fa-solid fa-bag-shopping"></i> <span id="cartCount">3</span> · 28,90 €</a>
+    </div>
+  </nav>
+
+  <section class="sh-wrap" style="padding:40px 0;">
+    <span class="sh-tag">10 · HISTORIQUE</span>
+    <h1 style="font-family:var(--sh-font-display);font-size:clamp(36px,5vw,56px);margin:4px 0 0;">TES STACKS PASSÉS.</h1>
+    <p style="font-size:14px;color:var(--sh-text-muted);margin:8px 0 0;max-width:480px;">Clique sur « re-commander » pour relancer la même commande en 2 secondes. Tu peux aussi modifier avant de valider.</p>
+
+    <div style="display:flex;gap:10px;margin-top:22px;align-items:center;flex-wrap:wrap;">
+      <span class="sh-chip sh-chip--ink">TOUT</span>
+      <span class="sh-chip">LIVRÉS</span>
+      <span class="sh-chip">CLICK &amp; COLLECT</span>
+      <span class="sh-chip">CETTE SEMAINE</span>
+      <div style="margin-left:auto;display:flex;gap:8px;flex-wrap:wrap;">
+        <span class="sh-chip"><i class="fa-solid fa-magnifying-glass"></i> RECHERCHER</span>
+        <span class="sh-chip">TRI · DATE ↓</span>
+      </div>
+    </div>
+
+    <div style="margin-top:22px;display:flex;flex-direction:column;gap:10px;">
+
+      <article class="sh-orow">
+        <div class="sh-orow__id"><div class="lbl">COMMANDE</div><div class="v">STK-046</div></div>
+        <div class="sh-orow__info"><div class="sh-bungee" style="font-size:12px;color:var(--sh-text-muted);">Hier · 21:14</div><div style="font-size:13px;margin-top:4px;">« THE LOUD » · Fries · Rootbeer</div></div>
+        <div class="sh-orow__total">24,40 €</div>
+        <div class="sh-orow__status"><span class="sh-chip sh-chip--ink">LIVRÉ</span></div>
+        <div class="sh-orow__actions"><button class="sh-btn sh-btn--sm sh-btn--primary">↻ RE-COMMANDER</button><button class="sh-btn sh-btn--sm">VOIR</button></div>
+      </article>
+
+      <article class="sh-orow">
+        <div class="sh-orow__id"><div class="lbl">COMMANDE</div><div class="v">STK-039</div></div>
+        <div class="sh-orow__info"><div class="sh-bungee" style="font-size:12px;color:var(--sh-text-muted);">7 mai · 13:22</div><div style="font-size:13px;margin-top:4px;">THE BIRDIE ×2 · Cookie</div></div>
+        <div class="sh-orow__total">34,70 €</div>
+        <div class="sh-orow__status"><span class="sh-chip sh-chip--ink">LIVRÉ</span></div>
+        <div class="sh-orow__actions"><button class="sh-btn sh-btn--sm sh-btn--primary">↻ RE-COMMANDER</button><button class="sh-btn sh-btn--sm">VOIR</button></div>
+      </article>
+
+      <article class="sh-orow">
+        <div class="sh-orow__id"><div class="lbl">COMMANDE</div><div class="v">STK-031</div></div>
+        <div class="sh-orow__info"><div class="sh-bungee" style="font-size:12px;color:var(--sh-text-muted);">2 mai · 20:48</div><div style="font-size:13px;margin-top:4px;">« BREAKFAST KING » · Milkshake</div></div>
+        <div class="sh-orow__total">20,40 €</div>
+        <div class="sh-orow__status"><span class="sh-chip sh-chip--ink">LIVRÉ</span></div>
+        <div class="sh-orow__actions"><button class="sh-btn sh-btn--sm sh-btn--primary">↻ RE-COMMANDER</button><button class="sh-btn sh-btn--sm">VOIR</button></div>
+      </article>
+
+      <article class="sh-orow">
+        <div class="sh-orow__id"><div class="lbl">COMMANDE</div><div class="v">STK-024</div></div>
+        <div class="sh-orow__info"><div class="sh-bungee" style="font-size:12px;color:var(--sh-text-muted);">24 avr · 19:10</div><div style="font-size:13px;margin-top:4px;">THE STACK · Onion rings · Cola</div></div>
+        <div class="sh-orow__total">22,90 €</div>
+        <div class="sh-orow__status"><span class="sh-chip sh-chip--ink">LIVRÉ</span></div>
+        <div class="sh-orow__actions"><button class="sh-btn sh-btn--sm sh-btn--primary">↻ RE-COMMANDER</button><button class="sh-btn sh-btn--sm">VOIR</button></div>
+      </article>
+
+      <article class="sh-orow">
+        <div class="sh-orow__id is-danger"><div class="lbl">COMMANDE</div><div class="v">STK-018</div></div>
+        <div class="sh-orow__info"><div class="sh-bungee" style="font-size:12px;color:var(--sh-text-muted);">18 avr · 12:30</div><div style="font-size:13px;margin-top:4px;">THE GREEN · Fries</div></div>
+        <div class="sh-orow__total">19,40 €</div>
+        <div class="sh-orow__status"><span class="sh-chip" style="background:var(--sh-error);color:var(--sh-cream);border-color:var(--sh-error);">ANNULÉ</span></div>
+        <div class="sh-orow__actions"><button class="sh-btn sh-btn--sm sh-btn--primary" disabled>↻ RE-COMMANDER</button><button class="sh-btn sh-btn--sm">VOIR</button></div>
+      </article>
+
+    </div>
+  </section>
+
+  <footer class="sh-footer">
+    <div class="sh-footer__grid">
+      <div><a class="sh-footer__logo" href="index.html" aria-label="Retour à l'accueil">STACK<br/>HOUSE</a><div class="sh-mono" style="margin-top:8px;letter-spacing:.16em;opacity:.85;">METS CE QUE TU VEUX · DEPUIS 2026</div></div>
+      <div><h4>LE DINER</h4><ul><li>12 rue Mercière</li><li>69002 Lyon</li></ul></div>
+      <div><h4>CONTACT</h4><ul><li><a href="mailto:hello@stackhouse.fr">hello@stackhouse.fr</a></li></ul></div>
+      <div><h4>MENTIONS</h4><ul><li><a href="#">CGU</a></li></ul></div>
+    </div>
+    <hr class="sh-hr-dashed" style="border-color:var(--sh-cream);opacity:.4;margin:32px 0 18px;" />
+    <div class="sh-footer__bottom"><span>© 2026 STACK HOUSE</span><span>★ NO BS ★</span></div>
+  </footer>
+
+  <script src="js/nav.js" defer></script>
+</body>
+</html>

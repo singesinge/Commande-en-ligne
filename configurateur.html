@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Configurateur — Empile ton burger · Stack House</title>
+  <meta name="description" content="Construis ton burger en 4 étapes. Tous les ingrédients inclus dans le prix unique 14,90 €." />
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+<nav class="sh-nav" aria-label="Navigation principale">
+  <a class="sh-nav__brand" href="index.html" aria-label="Accueil Stack House">
+    <span class="sh-nav__logo">SH</span>
+    <span><span class="sh-nav__brand-text">STACK HOUSE</span><br/><span class="sh-nav__brand-sub">METS CE QUE TU VEUX</span></span>
+  </a>
+  <div class="sh-nav__cta">
+    <span class="sh-chip sh-nav__cta-zone"><i class="fa-solid fa-location-dot"></i> 69002 LYON · 22 MIN</span>
+    <a href="compte.html" class="sh-btn sh-btn--sm sh-nav__cta-account"><i class="fa-regular fa-user"></i> COMPTE</a>
+    <a href="panier.html" class="sh-btn sh-btn--sm sh-btn--primary"><i class="fa-solid fa-bag-shopping"></i> <span id="cartCount">3</span> · 28,90 €</a>
+  </div>
+</nav>
+
+<main class="sh-cfg">
+
+  <!-- TOP BAR -->
+  <header class="sh-cfg__top">
+    <a class="sh-cfg__brand" href="index.html" aria-label="Retour à l'accueil" style="text-decoration:none;color:inherit;">
+      <span class="sh-nav__logo">SH</span>
+      <span class="sh-bungee" style="font-size:13px;">EMPILE TON BURGER</span>
+    </a>
+
+    <!-- Progress stepper -->
+    <div class="sh-cfg__stepper" id="stepper">
+      <div class="sh-cfg__step active" data-step="1">
+        <span class="sh-cfg__bullet">1</span>
+        <span class="sh-cfg__lbl">PAIN</span>
+      </div>
+      <div class="sh-cfg__bar"></div>
+      <div class="sh-cfg__step" data-step="2">
+        <span class="sh-cfg__bullet">2</span>
+        <span class="sh-cfg__lbl">PROTÉINE</span>
+      </div>
+      <div class="sh-cfg__bar"></div>
+      <div class="sh-cfg__step" data-step="3">
+        <span class="sh-cfg__bullet">3</span>
+        <span class="sh-cfg__lbl">GARNITURES</span>
+      </div>
+      <div class="sh-cfg__bar"></div>
+      <div class="sh-cfg__step" data-step="4">
+        <span class="sh-cfg__bullet">4</span>
+        <span class="sh-cfg__lbl">NOM &amp; SAUCE</span>
+      </div>
+    </div>
+
+    <div style="display:flex;align-items:center;gap:10px;">
+      <span class="sh-chip sh-chip--must">★ TOUT INCLUS</span>
+      <a href="index.html" class="sh-btn sh-btn--sm"><i class="fa-solid fa-xmark"></i> QUITTER</a>
+    </div>
+  </header>
+
+  <!-- BODY -->
+  <div class="sh-cfg__body">
+
+    <!-- LEFT — preview -->
+    <aside class="sh-cfg__preview">
+      <div class="sh-cfg__phead">
+        <span class="sh-mono" style="font-size:10px;letter-spacing:.18em;color:var(--sh-mustard);">APERÇU TEMPS RÉEL · STACK #047</span>
+        <h2 class="h" id="previewHeadline">ON COMMENCE PAR LE PAIN.</h2>
+        <p class="sub" id="previewSub">Choisis ta base. Tu pourras toujours revenir en arrière, rien n'est figé.</p>
+      </div>
+
+      <div class="sh-cfg__stack">
+        <img src="img/image.png" alt="Aperçu du burger" class="sh-cfg__heroimg" />
+      </div>
+
+      <div class="sh-cfg__sum">
+        <div class="row">
+          <span class="name" id="sumName">STACK #047</span>
+          <span class="price">14,90 €</span>
+        </div>
+        <div class="meta"><span id="sumLayers">1</span> étage<span id="sumLayersPlural"></span> · <span id="sumIngs">1</span> ingrédient<span id="sumIngsPlural"></span></div>
+        <div class="ok">★ AUCUN SUPPLÉMENT — JAMAIS</div>
+      </div>
+    </aside>
+
+    <!-- RIGHT — choices -->
+    <section class="sh-cfg__choices">
+
+      <!-- STEP 1 — PAIN -->
+      <div class="sh-cfg__panel" data-panel="1">
+        <div class="sh-bun-grid" id="bunGrid">
+          <button class="sh-bun is-selected" data-bun="sesame" type="button">
+            <div class="sh-bun__media"><img src="img/image.png" alt="The Sesame" /><span class="sh-bun__badge" data-bun-badge>+1</span></div>
+            <div class="sh-bun__body">
+              <span class="sh-bun__tag">POPULAIRE · ★</span>
+              <h3 class="sh-bun__title">THE SESAME</h3>
+              <p class="sh-bun__desc">Sesame toasted bun</p>
+              <span class="sh-bun__add" aria-hidden="true">+</span>
+            </div>
+          </button>
+          <button class="sh-bun" data-bun="bao" type="button">
+            <div class="sh-bun__media"><img src="img/image.png" alt="The Bao" /><span class="sh-bun__badge" data-bun-badge>+1</span></div>
+            <div class="sh-bun__body">
+              <span class="sh-bun__tag">POPULAIRE · ★</span>
+              <h3 class="sh-bun__title">THE BAO</h3>
+              <p class="sh-bun__desc">White bao toasted bun</p>
+              <span class="sh-bun__add" aria-hidden="true">+</span>
+            </div>
+          </button>
+          <button class="sh-bun" data-bun="brioche" type="button">
+            <div class="sh-bun__media"><img src="img/image.png" alt="The Brioche" /><span class="sh-bun__badge" data-bun-badge>+1</span></div>
+            <div class="sh-bun__body">
+              <span class="sh-bun__tag">POPULAIRE · ★</span>
+              <h3 class="sh-bun__title">THE BRIOCHE</h3>
+              <p class="sh-bun__desc">Super light brioche toasted bun</p>
+              <span class="sh-bun__add" aria-hidden="true">+</span>
+            </div>
+          </button>
+          <button class="sh-bun" data-bun="charcoal" type="button">
+            <div class="sh-bun__media"><img src="img/image.png" alt="The Charcoal" /><span class="sh-bun__badge" data-bun-badge>+1</span></div>
+            <div class="sh-bun__body">
+              <span class="sh-bun__tag">POPULAIRE · ★</span>
+              <h3 class="sh-bun__title">THE CHARCOAL</h3>
+              <p class="sh-bun__desc">Fluffy black bun</p>
+              <span class="sh-bun__add" aria-hidden="true">+</span>
+            </div>
+          </button>
+          <button class="sh-bun" data-bun="potatoe" type="button">
+            <div class="sh-bun__media"><img src="img/image.png" alt="The Potatoe" /><span class="sh-bun__badge" data-bun-badge>+1</span></div>
+            <div class="sh-bun__body">
+              <span class="sh-bun__tag">POPULAIRE · ★</span>
+              <h3 class="sh-bun__title">THE POTATOE</h3>
+              <p class="sh-bun__desc">Ultra fluffy potatoe toasted bread</p>
+              <span class="sh-bun__add" aria-hidden="true">+</span>
+            </div>
+          </button>
+          <button class="sh-bun" data-bun="salad" type="button">
+            <div class="sh-bun__media"><img src="img/image.png" alt="The Salad" /><span class="sh-bun__badge" data-bun-badge>+1</span></div>
+            <div class="sh-bun__body">
+              <span class="sh-bun__tag">POPULAIRE · ★</span>
+              <h3 class="sh-bun__title">THE SALAD</h3>
+              <p class="sh-bun__desc">A low cal salad wrap, no bun</p>
+              <span class="sh-bun__add" aria-hidden="true">+</span>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <!-- STEP 2 — PROTÉINE -->
+      <div class="sh-cfg__panel" data-panel="2" hidden>
+        <header style="margin-bottom:16px;">
+          <span class="sh-tag">ÉTAPE 2 SUR 4</span>
+          <h2 style="font-family:var(--sh-font-display);font-size:clamp(28px,4.5vw,44px);margin:4px 0 0;">TA <span style="color:var(--sh-red);">PROTÉINE</span>.</h2>
+          <p style="font-size:14px;color:var(--sh-text-muted);margin:4px 0 0;">Max 3 items — tu peux prendre 3× la même.</p>
+        </header>
+
+        <div class="sh-ing-grid sh-ing-grid--3" id="meatGrid">
+          <button class="sh-ing" data-meat="boeuf-150" type="button">
+            <div class="sh-ing__media"><img src="img/image.png" alt="" /><div class="sh-ing__head"><span class="sh-chip sh-chip--red" style="font-size:9px;padding:3px 7px;">★ POPULAIRE</span></div></div>
+            <div class="sh-ing__name">BŒUF 150G</div>
+            <div class="sh-ing__sub">Race Limousine · French</div>
+            <div class="sh-ing__foot">
+              <span class="sh-ing__price">+ 0,00 €</span>
+              <span class="sh-ing__qty" data-qty hidden>×<span data-qty-value>0</span></span>
+            </div>
+          </button>
+          <button class="sh-ing" data-meat="boeuf-100" type="button">
+            <div class="sh-ing__media"><img src="img/image.png" alt="" /><div class="sh-ing__head"></div></div>
+            <div class="sh-ing__name">BŒUF 100G</div>
+            <div class="sh-ing__sub">Format mini · à empiler</div>
+            <div class="sh-ing__foot">
+              <span class="sh-ing__price">+ 0,00 €</span>
+              <span class="sh-ing__qty" data-qty hidden>×<span data-qty-value>0</span></span>
+            </div>
+          </button>
+          <button class="sh-ing" data-meat="poulet-pane" type="button">
+            <div class="sh-ing__media"><img src="img/image.png" alt="" /><div class="sh-ing__head"></div></div>
+            <div class="sh-ing__name">POULET PANÉ</div>
+            <div class="sh-ing__sub">Buttermilk · maison</div>
+            <div class="sh-ing__foot">
+              <span class="sh-ing__price">+ 0,00 €</span>
+              <span class="sh-ing__qty" data-qty hidden>×<span data-qty-value>0</span></span>
+            </div>
+          </button>
+          <button class="sh-ing" data-meat="poulet-grille" type="button">
+            <div class="sh-ing__media"><img src="img/image.png" alt="" /><div class="sh-ing__head"></div></div>
+            <div class="sh-ing__name">POULET GRILLÉ</div>
+            <div class="sh-ing__sub">Mariné 24h</div>
+            <div class="sh-ing__foot">
+              <span class="sh-ing__price">+ 0,00 €</span>
+              <span class="sh-ing__qty" data-qty hidden>×<span data-qty-value>0</span></span>
+            </div>
+          </button>
+          <button class="sh-ing" data-meat="vege" type="button">
+            <div class="sh-ing__media"><img src="img/image.png" alt="" /><div class="sh-ing__head"><span class="sh-chip sh-chip--must" style="font-size:9px;padding:3px 7px;">VEG</span></div></div>
+            <div class="sh-ing__name">STEAK VÉGÉ</div>
+            <div class="sh-ing__sub">Champignon · betterave</div>
+            <div class="sh-ing__foot">
+              <span class="sh-ing__price">+ 0,00 €</span>
+              <span class="sh-ing__qty" data-qty hidden>×<span data-qty-value>0</span></span>
+            </div>
+          </button>
+          <button class="sh-ing" data-meat="poisson" type="button">
+            <div class="sh-ing__media"><img src="img/image.png" alt="" /><div class="sh-ing__head"></div></div>
+            <div class="sh-ing__name">POISSON PANÉ</div>
+            <div class="sh-ing__sub">Cabillaud du jour</div>
+            <div class="sh-ing__foot">
+              <span class="sh-ing__price">+ 0,00 €</span>
+              <span class="sh-ing__qty" data-qty hidden>×<span data-qty-value>0</span></span>
+            </div>
+          </button>
+        </div>
+
+        <div style="display:flex;gap:12px;margin-top:18px;align-items:center;flex-wrap:wrap;">
+          <span class="sh-chip sh-chip--must" id="meatCountChip">★ 0/3 PROTÉINE · CLIQUE POUR AJOUTER</span>
+          <span class="sh-mono" style="font-size:11px;color:var(--sh-text-muted);">ASTUCE — CLIC DROIT OU LONG-PRESS POUR RETIRER</span>
+        </div>
+      </div>
+
+      <!-- STEP 3 — GARNITURES -->
+      <div class="sh-cfg__panel" data-panel="3" hidden>
+        <header style="display:flex;justify-content:space-between;align-items:end;margin-bottom:14px;flex-wrap:wrap;gap:8px;">
+          <div>
+            <span class="sh-tag">ÉTAPE 3 SUR 4</span>
+            <h2 style="font-family:var(--sh-font-display);font-size:clamp(28px,4.5vw,38px);margin:4px 0 0;">GARNITURES.</h2>
+          </div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;">
+            <button class="sh-chip sh-chip--ink" type="button">TOUT</button>
+            <button class="sh-chip" type="button">FROMAGES</button>
+            <button class="sh-chip" type="button">LÉGUMES</button>
+            <button class="sh-chip" type="button">CROQUANT</button>
+            <button class="sh-chip" type="button">EXTRA</button>
+          </div>
+        </header>
+
+        <div class="sh-ing-grid sh-ing-grid--4" id="topGrid">
+          <button class="sh-ing" data-top="cheddar" data-color="var(--sh-mustard)" type="button">
+            <div class="sh-ing__media"><img src="img/image.png" alt="" /><div class="sh-ing__head"></div></div>
+            <div class="sh-ing__name">CHEDDAR</div><div class="sh-ing__sub">Fondu</div>
+            <div class="sh-ing__foot"><span class="sh-ing__price">+ 0,00 €</span></div>
+          </button>
+          <button class="sh-ing" data-top="bacon" data-color="var(--sh-red-deep)" type="button">
+            <div class="sh-ing__media"><img src="img/image.png" alt="" /><div class="sh-ing__head"><span class="sh-chip sh-chip--red" style="font-size:9px;padding:3px 7px;">★ POPULAIRE</span></div></div>
+            <div class="sh-ing__name">BACON</div><div class="sh-ing__sub">Croustillant</div>
+            <div class="sh-ing__foot"><span class="sh-ing__price">+ 0,00 €</span></div>
+          </button>
+          <button class="sh-ing" data-top="salade" data-color="var(--sh-pickle)" type="button">
+            <div class="sh-ing__media"><img src="img/image.png" alt="" /><div class="sh-ing__head"></div></div>
+            <div class="sh-ing__name">SALADE</div><div class="sh-ing__sub">Iceberg</div>
+            <div class="sh-ing__foot"><span class="sh-ing__price">+ 0,00 €</span></div>
+          </button>
+          <button class="sh-ing" data-top="tomate" data-color="var(--sh-red-deep)" type="button">
+            <div class="sh-ing__media"><img src="img/image.png" alt="" /><div class="sh-ing__head"></div></div>
+            <div class="sh-ing__name">TOMATE</div><div class="sh-ing__sub">Cœur de bœuf</div>
+            <div class="sh-ing__foot"><span class="sh-ing__price">+ 0,00 €</span></div>
+          </button>
+          <button class="sh-ing" data-top="oignonfrit" data-color="var(--sh-mustard-deep)" type="button">
+            <div class="sh-ing__media"><img src="img/image.png" alt="" /><div class="sh-ing__head"></div></div>
+            <div class="sh-ing__name">OIGNON FRIT</div><div class="sh-ing__sub">Croustillant</div>
+            <div class="sh-ing__foot"><span class="sh-ing__price">+ 0,00 €</span></div>
+          </button>
+          <button class="sh-ing" data-top="oignonrouge" data-color="var(--sh-red)" type="button">
+            <div class="sh-ing__media"><img src="img/image.png" alt="" /><div class="sh-ing__head"></div></div>
+            <div class="sh-ing__name">OIGNON RGE</div><div class="sh-ing__sub">Cru, fines tranches</div>
+            <div class="sh-ing__foot"><span class="sh-ing__price">+ 0,00 €</span></div>
+          </button>
+          <button class="sh-ing" data-top="pickles" data-color="var(--sh-pickle)" type="button">
+            <div class="sh-ing__media"><img src="img/image.png" alt="" /><div class="sh-ing__head"></div></div>
+            <div class="sh-ing__name">PICKLES</div><div class="sh-ing__sub">Croquants</div>
+            <div class="sh-ing__foot"><span class="sh-ing__price">+ 0,00 €</span></div>
+          </button>
+          <button class="sh-ing" data-top="jalapenos" data-color="var(--sh-pickle)" type="button">
+            <div class="sh-ing__media"><img src="img/image.png" alt="" /><div class="sh-ing__head"><span class="sh-chip sh-chip--neon" style="font-size:9px;padding:3px 7px;">🌶 SPICY</span></div></div>
+            <div class="sh-ing__name">JALAPEÑOS</div><div class="sh-ing__sub">Confit maison</div>
+            <div class="sh-ing__foot"><span class="sh-ing__price">+ 0,00 €</span></div>
+          </button>
+          <button class="sh-ing" data-top="oeuf" data-color="var(--sh-mustard)" type="button">
+            <div class="sh-ing__media"><img src="img/image.png" alt="" /><div class="sh-ing__head"></div></div>
+            <div class="sh-ing__name">ŒUF MIROIR</div><div class="sh-ing__sub">Bio plein air</div>
+            <div class="sh-ing__foot"><span class="sh-ing__price">+ 0,00 €</span></div>
+          </button>
+          <button class="sh-ing" data-top="champignons" data-color="var(--sh-ink-2)" type="button">
+            <div class="sh-ing__media"><img src="img/image.png" alt="" /><div class="sh-ing__head"><span class="sh-chip sh-chip--must" style="font-size:9px;padding:3px 7px;">VEG</span></div></div>
+            <div class="sh-ing__name">CHAMPIGNONS</div><div class="sh-ing__sub">Sautés à l'ail</div>
+            <div class="sh-ing__foot"><span class="sh-ing__price">+ 0,00 €</span></div>
+          </button>
+          <button class="sh-ing" data-top="guacamole" data-color="var(--sh-pickle)" type="button">
+            <div class="sh-ing__media"><img src="img/image.png" alt="" /><div class="sh-ing__head"><span class="sh-chip sh-chip--must" style="font-size:9px;padding:3px 7px;">VEG</span></div></div>
+            <div class="sh-ing__name">GUACAMOLE</div><div class="sh-ing__sub">Avocat frais</div>
+            <div class="sh-ing__foot"><span class="sh-ing__price">+ 0,00 €</span></div>
+          </button>
+          <button class="sh-ing" data-top="ananas" data-color="var(--sh-mustard)" type="button">
+            <div class="sh-ing__media"><img src="img/image.png" alt="" /><div class="sh-ing__head"></div></div>
+            <div class="sh-ing__name">ANANAS GRILLÉ</div><div class="sh-ing__sub">Saison</div>
+            <div class="sh-ing__foot"><span class="sh-ing__price">+ 0,00 €</span></div>
+          </button>
+        </div>
+
+        <div style="display:flex;gap:12px;margin-top:12px;align-items:center;flex-wrap:wrap;">
+          <span class="sh-chip sh-chip--must" id="topCountChip">★ 0 GARNITURE · TOUT COMPRIS</span>
+          <span class="sh-mono" style="font-size:11px;color:var(--sh-text-muted);">ASTUCE — DOUBLE-CLIQUE POUR +2 D'UN COUP</span>
+        </div>
+      </div>
+
+      <!-- STEP 4 — NOM & SAUCE -->
+      <div class="sh-cfg__panel" data-panel="4" hidden>
+        <header style="margin-bottom:14px;">
+          <span class="sh-tag">ÉTAPE 4 SUR 4</span>
+          <h2 style="font-family:var(--sh-font-display);font-size:clamp(28px,4.5vw,40px);margin:4px 0 0;">SAUCE &amp; <span style="color:var(--sh-red);">NOM</span>.</h2>
+        </header>
+
+        <span class="sh-mono" style="font-size:11px;letter-spacing:.14em;display:block;margin-bottom:8px;">CHOISIS TA SAUCE (1 INCLUSE, +0,50 € APRÈS)</span>
+        <div class="sh-sauce-grid" id="sauceGrid" style="margin-bottom:18px;">
+          <button class="sh-sauce is-active" data-sauce="maison" type="button"><span class="sh-sauce__thumb"><img src="img/image.png" alt="" /></span><span class="sh-sauce__name">MAISON</span></button>
+          <button class="sh-sauce" data-sauce="neon" type="button"><span class="sh-sauce__thumb"><img src="img/image.png" alt="" /></span><span class="sh-sauce__name">NEON</span><i class="fa-solid fa-fire" style="color:var(--sh-neon-pink);"></i></button>
+          <button class="sh-sauce" data-sauce="bbq" type="button"><span class="sh-sauce__thumb"><img src="img/image.png" alt="" /></span><span class="sh-sauce__name">BBQ FUMÉE</span></button>
+          <button class="sh-sauce" data-sauce="buffalo" type="button"><span class="sh-sauce__thumb"><img src="img/image.png" alt="" /></span><span class="sh-sauce__name">BUFFALO</span></button>
+          <button class="sh-sauce" data-sauce="aioli" type="button"><span class="sh-sauce__thumb"><img src="img/image.png" alt="" /></span><span class="sh-sauce__name">AÏOLI</span></button>
+          <button class="sh-sauce" data-sauce="moutarde" type="button"><span class="sh-sauce__thumb"><img src="img/image.png" alt="" /></span><span class="sh-sauce__name">MOUTARDE</span></button>
+          <button class="sh-sauce" data-sauce="tartare" type="button"><span class="sh-sauce__thumb"><img src="img/image.png" alt="" /></span><span class="sh-sauce__name">TARTARE</span></button>
+          <button class="sh-sauce" data-sauce="vegan" type="button"><span class="sh-sauce__thumb"><img src="img/image.png" alt="" /></span><span class="sh-sauce__name">VEGAN</span></button>
+        </div>
+
+        <span class="sh-mono" style="font-size:11px;letter-spacing:.14em;display:block;margin-bottom:8px;">NOMME TON BURGER (OPTIONNEL)</span>
+        <div style="position:relative;margin-bottom:12px;">
+          <input class="sh-input" id="burgerName" value="THE LOUD" style="font-family:var(--sh-font-display);font-size:24px;letter-spacing:.02em;padding-left:18px;padding-right:200px;height:64px;" />
+          <span class="sh-chip sh-chip--must" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);">★ ENREGISTRER DANS MES STACKS</span>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px;">
+          <button class="sh-chip" type="button" data-namesuggest="THE LOUD">THE LOUD</button>
+          <button class="sh-chip" type="button" data-namesuggest="DOUBLE TROUBLE">DOUBLE TROUBLE</button>
+          <button class="sh-chip" type="button" data-namesuggest="NEON KING">NEON KING</button>
+          <button class="sh-chip" type="button" data-namesuggest="CHEESE FORTRESS">CHEESE FORTRESS</button>
+          <button class="sh-chip" type="button" data-namesuggest="BACON STORM">BACON STORM</button>
+        </div>
+
+        <div class="sh-card" style="padding:16px;background:var(--sh-cream-2);">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span class="sh-bungee" style="font-size:13px;">RÉCAP COMPLET</span>
+            <button class="sh-btn sh-btn--ghost sh-btn--sm" type="button" id="editBtn"><i class="fa-solid fa-pen"></i> MODIFIER</button>
+          </div>
+          <div id="finalRecap" style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px;font-size:12px;">
+            <!-- rendered by JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- FOOT -->
+      <div class="sh-cfg__foot">
+        <span class="note" id="footNote">ÉTAPE 1/4 · APPUIE ENTRÉE POUR CONTINUER</span>
+        <div style="display:flex;gap:10px;">
+          <button class="sh-btn sh-btn--ghost" id="prevBtn" type="button" style="display:none;">← RETOUR</button>
+          <button class="sh-btn sh-btn--primary" id="nextBtn" type="button">CONTINUER <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</main>
+
+<script src="js/nav.js" defer></script>
+<script src="js/configurator.js" defer></script>
+</body>
+</html>

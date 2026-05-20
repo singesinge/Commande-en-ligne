@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Menu — Stack House · Empile ou pioche</title>
+  <meta name="description" content="Burgers signature, sides, drinks, desserts et sauces. Tout est sans suppléments." />
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <nav class="sh-nav" aria-label="Navigation principale">
+    <a class="sh-nav__brand" href="index.html" aria-label="Accueil Stack House">
+      <span class="sh-nav__logo">SH</span>
+      <span><span class="sh-nav__brand-text">STACK HOUSE</span><br/><span class="sh-nav__brand-sub">METS CE QUE TU VEUX</span></span>
+    </a>
+    <div class="sh-nav__cta">
+      <span class="sh-chip sh-nav__cta-zone"><i class="fa-solid fa-location-dot"></i> 69002 LYON · 22 MIN</span>
+      <a href="compte.html" class="sh-btn sh-btn--sm sh-nav__cta-account"><i class="fa-regular fa-user"></i> COMPTE</a>
+      <a href="panier.html" class="sh-btn sh-btn--sm sh-btn--primary"><i class="fa-solid fa-bag-shopping"></i> <span id="cartCount">3</span> · 28,90 €</a>
+    </div>
+  </nav>
+
+  <!-- BANNER -->
+  <section class="sh-wrap sh-banner">
+    <div class="sh-banner__row">
+      <div>
+        <span class="sh-tag">LE MENU</span>
+        <h1>EMPILE,<br/>OU PIOCHE.</h1>
+      </div>
+      <p style="max-width:380px;color:var(--sh-text-muted);font-size:14px;">
+        Tu peux construire ton burger librement (recommandé ★) ou choisir une de nos compositions signature. À côté : sides, boissons, desserts. Tout est sans suppléments.
+      </p>
+    </div>
+
+    <!-- Categories -->
+    <div class="sh-catbar">
+      <button class="sh-cat is-active"><i class="fa-solid fa-burger"></i> BURGERS</button>
+      <button class="sh-cat"><i class="fa-solid fa-plus"></i> CONSTRUIS</button>
+      <button class="sh-cat"><i class="fa-solid fa-french-fries"></i> SIDES</button>
+      <button class="sh-cat"><i class="fa-solid fa-mug-hot"></i> BOISSONS</button>
+      <button class="sh-cat"><i class="fa-regular fa-heart"></i> DESSERTS</button>
+      <button class="sh-cat"><i class="fa-solid fa-bottle-droplet"></i> SAUCES</button>
+      <div style="margin-left:auto;display:flex;gap:8px;flex-wrap:wrap;">
+        <span class="sh-chip">TRI · POPULARITÉ ↓</span>
+        <span class="sh-chip">FILTRES · 0</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUILD YOUR OWN BANNER -->
+  <section class="sh-wrap" style="padding-top:40px;">
+    <div class="sh-build">
+      <div class="sh-build__copy">
+        <span class="sh-chip sh-chip--neon">★ RECOMMANDÉ</span>
+        <h2 class="sh-build__title">CONSTRUIS<br/><span class="t-mustard">TON BURGER.</span></h2>
+        <p class="sh-build__desc">Le configurateur en 4 étapes. 24 ingrédients. Pas de suppléments. Aucune limite — sauf ton appétit.</p>
+        <div class="sh-build__ctas">
+          <a class="sh-btn sh-btn--primary" href="configurateur.html">EMPILE MAINTENANT <i class="fa-solid fa-arrow-right"></i></a>
+          <a class="sh-btn" style="background:transparent;color:var(--sh-cream);border-color:var(--sh-cream);" href="index.html#concept">VOIR COMMENT ÇA MARCHE</a>
+        </div>
+      </div>
+      <div class="sh-build__visual">
+        <img src="img/image.png" alt="Aperçu d'un burger personnalisé" />
+      </div>
+    </div>
+  </section>
+
+  <!-- HOUSE SPECIALS -->
+  <section class="sh-section">
+    <div class="sh-wrap">
+      <header class="sh-specials__head">
+        <h2 class="sh-specials__title">HOUSE SPECIALS<span class="sh-dot">.</span></h2>
+        <span class="sh-mono" style="font-size:11px;color:var(--sh-text-muted);letter-spacing:.16em;">06 PROPOSITIONS · MODIFIABLES À 100%</span>
+      </header>
+
+      <div class="sh-pgrid sh-pgrid--3">
+        <article class="sh-pcard">
+          <div class="sh-pcard__media">
+            <img src="img/image.png" alt="The Stack" />
+            <span class="sh-pcard__badge">★ #1</span>
+          </div>
+          <div class="sh-pcard__body">
+            <span class="sh-pcard__tag">POPULAIRE · ★</span>
+            <h3 class="sh-pcard__title">THE STACK</h3>
+            <p class="sh-pcard__desc">Triple steak · double cheddar · bacon · oignons frits · sauce maison</p>
+            <div class="sh-pcard__foot"><span class="sh-pcard__price">14,90 €</span><button class="sh-pcard__add">+</button></div>
+          </div>
+        </article>
+        <article class="sh-pcard">
+          <div class="sh-pcard__media"><img src="img/image.png" alt="The Birdie" /></div>
+          <div class="sh-pcard__body">
+            <span class="sh-pcard__tag">CLUB</span>
+            <h3 class="sh-pcard__title">THE BIRDIE</h3>
+            <p class="sh-pcard__desc">Poulet pané · coleslaw · sauce buffalo · pickles</p>
+            <div class="sh-pcard__foot"><span class="sh-pcard__price">14,90 €</span><button class="sh-pcard__add">+</button></div>
+          </div>
+        </article>
+        <article class="sh-pcard sh-pcard--fries">
+          <div class="sh-pcard__media"><img src="img/image.png" alt="The Green" /></div>
+          <div class="sh-pcard__body">
+            <span class="sh-pcard__tag">VEGGIE</span>
+            <h3 class="sh-pcard__title">THE GREEN</h3>
+            <p class="sh-pcard__desc">Steak champignon · avocat · pickles · sauce verte</p>
+            <div class="sh-pcard__foot"><span class="sh-pcard__price">14,90 €</span><button class="sh-pcard__add">+</button></div>
+          </div>
+        </article>
+        <article class="sh-pcard sh-pcard--drink">
+          <div class="sh-pcard__media"><img src="img/image.png" alt="The Wave" /></div>
+          <div class="sh-pcard__body">
+            <span class="sh-pcard__tag">FISH</span>
+            <h3 class="sh-pcard__title">THE WAVE</h3>
+            <p class="sh-pcard__desc">Poisson pané · sauce tartare · roquette</p>
+            <div class="sh-pcard__foot"><span class="sh-pcard__price">14,90 €</span><button class="sh-pcard__add">+</button></div>
+          </div>
+        </article>
+        <article class="sh-pcard sh-pcard--sauce">
+          <div class="sh-pcard__media"><img src="img/image.png" alt="The Neon" /></div>
+          <div class="sh-pcard__body">
+            <span class="sh-pcard__tag">SPICY · 🌶</span>
+            <h3 class="sh-pcard__title">THE NEON</h3>
+            <p class="sh-pcard__desc">Steak · jalapeños · oignons frits · sauce néon</p>
+            <div class="sh-pcard__foot"><span class="sh-pcard__price">14,90 €</span><button class="sh-pcard__add">+</button></div>
+          </div>
+        </article>
+        <article class="sh-pcard">
+          <div class="sh-pcard__media"><img src="img/image.png" alt="The Sunny" /></div>
+          <div class="sh-pcard__body">
+            <span class="sh-pcard__tag">BREAKFAST</span>
+            <h3 class="sh-pcard__title">THE SUNNY</h3>
+            <p class="sh-pcard__desc">Œuf miroir · bacon · cheddar · hash brown</p>
+            <div class="sh-pcard__foot"><span class="sh-pcard__price">14,90 €</span><button class="sh-pcard__add">+</button></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIDES & DRINKS -->
+  <section class="sh-section" style="padding-top:0;">
+    <div class="sh-wrap">
+      <h2 class="sh-specials__title" style="margin-bottom:18px;">SIDES &amp; DRINKS<span class="sh-dot">.</span></h2>
+      <div class="sh-pgrid sh-pgrid--4">
+        <article class="sh-pcard sh-pcard--fries sh-pcard--compact">
+          <div class="sh-pcard__media"><img src="img/image.png" alt="Fries maison" /></div>
+          <div class="sh-pcard__body">
+            <span class="sh-pcard__tag">SIDE</span>
+            <h3 class="sh-pcard__title">FRIES MAISON</h3>
+            <p class="sh-pcard__desc">Pommes de terre · sel fumé</p>
+            <div class="sh-pcard__foot"><span class="sh-pcard__price">4,50 €</span><button class="sh-pcard__add">+</button></div>
+          </div>
+        </article>
+        <article class="sh-pcard sh-pcard--fries sh-pcard--compact">
+          <div class="sh-pcard__media"><img src="img/image.png" alt="Onion rings" /></div>
+          <div class="sh-pcard__body">
+            <span class="sh-pcard__tag">SIDE</span>
+            <h3 class="sh-pcard__title">ONION RINGS</h3>
+            <p class="sh-pcard__desc">Oignons croustillants</p>
+            <div class="sh-pcard__foot"><span class="sh-pcard__price">4,50 €</span><button class="sh-pcard__add">+</button></div>
+          </div>
+        </article>
+        <article class="sh-pcard sh-pcard--drink sh-pcard--compact">
+          <div class="sh-pcard__media"><img src="img/image.png" alt="Rootbeer" /></div>
+          <div class="sh-pcard__body">
+            <span class="sh-pcard__tag">DRINK</span>
+            <h3 class="sh-pcard__title">ROOTBEER</h3>
+            <p class="sh-pcard__desc">50cl maison</p>
+            <div class="sh-pcard__foot"><span class="sh-pcard__price">3,50 €</span><button class="sh-pcard__add">+</button></div>
+          </div>
+        </article>
+        <article class="sh-pcard sh-pcard--drink sh-pcard--compact">
+          <div class="sh-pcard__media"><img src="img/image.png" alt="Milkshake vanille" /></div>
+          <div class="sh-pcard__body">
+            <span class="sh-pcard__tag">DRINK</span>
+            <h3 class="sh-pcard__title">MILKSHAKE VANILLE</h3>
+            <p class="sh-pcard__desc">40cl glace artisanale</p>
+            <div class="sh-pcard__foot"><span class="sh-pcard__price">5,50 €</span><button class="sh-pcard__add">+</button></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESSERTS -->
+  <section class="sh-section" style="padding-top:0;">
+    <div class="sh-wrap">
+      <header class="sh-specials__head" style="margin-bottom:14px;">
+        <h2 class="sh-specials__title">DESSERTS<span class="sh-dot">.</span></h2>
+        <span class="sh-mono" style="font-size:11px;color:var(--sh-text-muted);letter-spacing:.16em;">★ SWEET SPOT · FAITS MAISON</span>
+      </header>
+      <div class="sh-pgrid sh-pgrid--4">
+        <article class="sh-pcard sh-pcard--dessert sh-pcard--compact">
+          <div class="sh-pcard__media"><img src="img/image.png" alt="Cookie chocolat" /></div>
+          <div class="sh-pcard__body">
+            <span class="sh-pcard__tag">DESSERT</span>
+            <h3 class="sh-pcard__title">COOKIE CHOCOLAT</h3>
+            <p class="sh-pcard__desc">Tiède · pépites · sel de Maldon</p>
+            <div class="sh-pcard__foot"><span class="sh-pcard__price">3,90 €</span><button class="sh-pcard__add">+</button></div>
+          </div>
+        </article>
+        <article class="sh-pcard sh-pcard--dessert sh-pcard--compact">
+          <div class="sh-pcard__media"><img src="img/image.png" alt="Cheesecake NY" /></div>
+          <div class="sh-pcard__body">
+            <span class="sh-pcard__tag">DESSERT</span>
+            <h3 class="sh-pcard__title">CHEESECAKE NY</h3>
+            <p class="sh-pcard__desc">Biscuit beurré · crème fouettée</p>
+            <div class="sh-pcard__foot"><span class="sh-pcard__price">5,50 €</span><button class="sh-pcard__add">+</button></div>
+          </div>
+        </article>
+        <article class="sh-pcard sh-pcard--dessert sh-pcard--compact">
+          <div class="sh-pcard__media"><img src="img/image.png" alt="Donut glacé" /></div>
+          <div class="sh-pcard__body">
+            <span class="sh-pcard__tag">DESSERT</span>
+            <h3 class="sh-pcard__title">DONUT GLACÉ</h3>
+            <p class="sh-pcard__desc">Glaçage néon · sucre rétro</p>
+            <div class="sh-pcard__foot"><span class="sh-pcard__price">3,50 €</span><button class="sh-pcard__add">+</button></div>
+          </div>
+        </article>
+        <article class="sh-pcard sh-pcard--dessert sh-pcard--compact">
+          <div class="sh-pcard__media"><img src="img/image.png" alt="Apple pie" /></div>
+          <div class="sh-pcard__body">
+            <span class="sh-pcard__tag">DESSERT</span>
+            <h3 class="sh-pcard__title">APPLE PIE</h3>
+            <p class="sh-pcard__desc">Pomme · cannelle · vanille tiède</p>
+            <div class="sh-pcard__foot"><span class="sh-pcard__price">5,90 €</span><button class="sh-pcard__add">+</button></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SAUCES -->
+  <section class="sh-section" style="padding-top:0;">
+    <div class="sh-wrap">
+      <header class="sh-specials__head" style="margin-bottom:14px;">
+        <h2 class="sh-specials__title">SAUCES<span class="sh-dot">.</span></h2>
+        <span class="sh-mono" style="font-size:11px;color:var(--sh-text-muted);letter-spacing:.16em;">★ 1 INCLUSE · LES SUIVANTES À 1,50 €</span>
+      </header>
+      <div class="sh-pgrid sh-pgrid--4">
+        <article class="sh-pcard sh-pcard--sauce sh-pcard--compact">
+          <div class="sh-pcard__media"><img src="img/image.png" alt="Sauce maison" />
+            <span class="sh-pcard__badge">★ INCLUS</span>
+          </div>
+          <div class="sh-pcard__body">
+            <span class="sh-pcard__tag">SAUCE · ★</span>
+            <h3 class="sh-pcard__title">MAISON</h3>
+            <p class="sh-pcard__desc">Crémeuse · tomate confite · épices</p>
+            <div class="sh-pcard__foot"><span class="sh-pcard__price">0,00 €</span><button class="sh-pcard__add">+</button></div>
+          </div>
+        </article>
+        <article class="sh-pcard sh-pcard--sauce sh-pcard--compact">
+          <div class="sh-pcard__media"><img src="img/image.png" alt="BBQ fumée" /></div>
+          <div class="sh-pcard__body">
+            <span class="sh-pcard__tag">SAUCE</span>
+            <h3 class="sh-pcard__title">BBQ FUMÉE</h3>
+            <p class="sh-pcard__desc">Mélasse · bois fumé · poivre</p>
+            <div class="sh-pcard__foot"><span class="sh-pcard__price">1,50 €</span><button class="sh-pcard__add">+</button></div>
+          </div>
+        </article>
+        <article class="sh-pcard sh-pcard--sauce sh-pcard--compact">
+          <div class="sh-pcard__media"><img src="img/image.png" alt="Buffalo" /></div>
+          <div class="sh-pcard__body">
+            <span class="sh-pcard__tag">SAUCE</span>
+            <h3 class="sh-pcard__title">BUFFALO</h3>
+            <p class="sh-pcard__desc">Piment cayenne · beurre clarifié</p>
+            <div class="sh-pcard__foot"><span class="sh-pcard__price">1,50 €</span><button class="sh-pcard__add">+</button></div>
+          </div>
+        </article>
+        <article class="sh-pcard sh-pcard--sauce sh-pcard--compact">
+          <div class="sh-pcard__media"><img src="img/image.png" alt="Neon hot" /></div>
+          <div class="sh-pcard__body">
+            <span class="sh-pcard__tag">SAUCE · 🌶</span>
+            <h3 class="sh-pcard__title">NEON HOT</h3>
+            <p class="sh-pcard__desc">Habanero · ananas · 4/5 piments</p>
+            <div class="sh-pcard__foot"><span class="sh-pcard__price">1,50 €</span><button class="sh-pcard__add">+</button></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- VA AVEC -->
+  <section class="sh-section" style="padding-top:0;padding-bottom:48px;">
+    <div class="sh-wrap">
+      <h2 class="sh-specials__title" style="margin-bottom:14px;">VA AVEC<span class="sh-dot">.</span></h2>
+      <div class="sh-xrow">
+        <div class="sh-card" style="background:var(--sh-mustard);">
+          <span class="sh-mono" style="font-size:11px;letter-spacing:.16em;">BUNDLE · ÉCONOMIE 3 €</span>
+          <h3 class="sh-xrow__t">BURGER + SIDE + DRINK</h3>
+          <p class="sh-xrow__d">Compose ton menu, économise sans y penser.</p>
+          <div class="sh-xrow__foot">
+            <span class="sh-xrow__price">21,90 €</span>
+            <button class="sh-btn sh-btn--primary sh-btn--sm">JE PRENDS</button>
+          </div>
+        </div>
+        <div class="sh-card">
+          <span class="sh-mono" style="font-size:11px;letter-spacing:.16em;color:var(--sh-text-muted);">POUR LA TABLE</span>
+          <h3 class="sh-xrow__t">COUVERTS BIO</h3>
+          <p class="sh-xrow__d" style="color:var(--sh-text-muted);">Bois compostable. Inclus si tu cliques.</p>
+          <div class="sh-xrow__foot">
+            <span class="sh-xrow__price">0,00 €</span>
+            <button class="sh-btn sh-btn--ghost sh-btn--sm">AJOUTER</button>
+          </div>
+        </div>
+        <div class="sh-card sh-card--dark">
+          <span class="sh-mono" style="font-size:11px;letter-spacing:.16em;color:var(--sh-mustard);">★ STACK CLUB</span>
+          <h3 class="sh-xrow__t" style="color:var(--sh-cream);">SAUCE SECRÈTE</h3>
+          <p class="sh-xrow__d" style="opacity:0.8;">Débloquée au niveau Stacker. Encore 2 commandes.</p>
+          <div class="sh-xrow__foot">
+            <span class="sh-mono" style="font-size:12px;opacity:0.7;">VERROUILLÉ · 2/5</span>
+            <button class="sh-btn sh-btn--sm sh-btn--mustard">VOIR</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFO BAND -->
+  <section class="sh-section" style="background:var(--sh-cream-2);border-top:2px solid var(--sh-ink);">
+    <div class="sh-wrap">
+      <div class="sh-info__grid">
+        <article><h3 class="sh-info__t">TOUT INCLUS<span class="sh-dot">.</span></h3><p class="sh-info__d">Prix unique 14,90 €. Zéro supplément. Promis.</p></article>
+        <article><h3 class="sh-info__t">LIVRÉ EN 25 MIN<span class="sh-dot">.</span></h3><p class="sh-info__d">Sous nos zones. Sinon click &amp; collect en 8 min.</p></article>
+        <article><h3 class="sh-info__t">SAUVÉ ET REJOUÉ<span class="sh-dot">.</span></h3><p class="sh-info__d">Tes stacks favoris re-commandés en 1 clic.</p></article>
+        <article><h3 class="sh-info__t">PAYE COMME TU VEUX<span class="sh-dot">.</span></h3><p class="sh-info__d">CB, Apple Pay, Google Pay, tickets resto.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="sh-footer">
+    <div class="sh-footer__grid">
+      <div>
+        <a class="sh-footer__logo" href="index.html" aria-label="Retour à l'accueil">STACK<br/>HOUSE</a>
+        <div class="sh-mono" style="margin-top:8px;letter-spacing:.16em;opacity:.85;">METS CE QUE TU VEUX · DEPUIS 2026</div>
+      </div>
+      <div><h4>LE DINER</h4><ul><li>12 rue Mercière</li><li>69002 Lyon</li><li>11h30 → 23h00</li><li>Tous les jours</li></ul></div>
+      <div><h4>CONTACT</h4><ul><li><a href="mailto:hello@stackhouse.fr">hello@stackhouse.fr</a></li><li>+33 4 78 00 00 00</li><li><a href="#">@stackhouse.diner</a></li><li><a href="#">Press kit</a></li></ul></div>
+      <div><h4>MENTIONS</h4><ul><li><a href="#">CGU</a></li><li><a href="#">Politique cookies</a></li><li><a href="#">Allergènes</a></li><li><a href="#">Plan du site</a></li></ul></div>
+    </div>
+    <hr class="sh-hr-dashed" style="border-color:var(--sh-cream);opacity:.4;margin:32px 0 18px;" />
+    <div class="sh-footer__bottom">
+      <span>© 2026 STACK HOUSE — STACK FREELY, EAT LOUDLY</span>
+      <span>★ NO SUPPLÉMENTS · NO BS ★</span>
+    </div>
+  </footer>
+
+  <script src="js/nav.js" defer></script>
+</body>
+</html>

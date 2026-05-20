@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>STACK HOUSE — Mets ce que tu veux. Free-stack burgers à Lyon.</title>
+  <meta name="description" content="Construis ton burger sans limite. Tous les ingrédients inclus, prix unique 14,90 €. Livré en 22 min à Lyon 1·2·6·7." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="css/landing.css" />
+  <!-- Font Awesome (icônes) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <!-- ════════ MODAL LOCALISATION (au chargement) ════════ -->
+  <div class="sh-locator is-open" id="locatorModal" role="dialog" aria-modal="true" aria-labelledby="locatorTitle">
+    <div class="sh-locator__backdrop" data-locator-close></div>
+    <div class="sh-locator__card sh-card" role="document">
+      <div class="sh-locator__head">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <span class="sh-mono" style="font-size:10px;letter-spacing:.18em;color:var(--sh-mustard);">STEP 0 · 1 MIN</span>
+          <span class="sh-bungee" style="font-size:14px;">ON COMMENCE PAR L'ADRESSE</span>
+        </div>
+        <button type="button" class="sh-modal__close" data-locator-close aria-label="Fermer"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <div class="sh-zonebox">
+        <div class="sh-zonebox__left">
+          <h2 id="locatorTitle" style="font-family:var(--sh-font-display);font-size:clamp(28px,4vw,40px);line-height:.95;margin:0;">OÙ EST-CE<br/>QU'ON T'EMMÈNE<br/><span style="color:var(--sh-red)">TA STACK ?</span></h2>
+          <p style="font-size:14px;color:var(--sh-text-muted);margin-top:12px;max-width:360px;">
+            Une seule étape avant de personnaliser. On vérifie la zone tout de suite — pour qu'on perde le moins de temps possible.
+          </p>
+
+          <div style="margin-top:24px;">
+            <span class="sh-mono" style="font-size:11px;letter-spacing:.14em;display:block;margin-bottom:8px;">MODE</span>
+            <div class="sh-mode">
+              <button type="button" class="is-active"><i class="fa-solid fa-truck-fast"></i> LIVRAISON</button>
+              <button type="button"><i class="fa-solid fa-shop"></i> CLICK &amp; COLLECT</button>
+            </div>
+          </div>
+
+          <form class="sh-locator__form" data-locator-form style="margin-top:24px;">
+            <label class="sh-label" for="locatorAddress">Adresse</label>
+            <div style="position:relative;">
+              <input id="locatorAddress" class="sh-input" placeholder="Entre ton adresse de livraison" style="padding-left:44px;padding-right:56px;font-size:16px;" autocomplete="street-address" required />
+              <i class="fa-solid fa-location-dot" style="position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--sh-red);"></i>
+              <span class="sh-chip sh-chip--ink" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);">↵</span>
+            </div>
+            <p class="sh-inline-ok" style="margin-top:10px;"><i class="fa-solid fa-check"></i> ZONE OK · LIVRÉ EN 22 MIN · SHIFT DISPO MAINTENANT</p>
+
+            <div style="margin-top:18px;">
+              <span class="sh-mono" style="font-size:10px;letter-spacing:.14em;color:var(--sh-text-muted);">SUGGESTIONS</span>
+              <div style="display:flex;flex-direction:column;gap:6px;margin-top:6px;">
+                <button type="button" class="sh-locator__sugg" data-sugg="12 rue Mercière, 69002 Lyon">
+                  <span><i class="fa-regular fa-clock"></i> Domicile · 12 rue Mercière, 69002</span>
+                  <span class="sh-mono">22 min</span>
+                </button>
+                <button type="button" class="sh-locator__sugg" data-sugg="88 quai Perrache, 69002 Lyon">
+                  <span><i class="fa-regular fa-clock"></i> Boulot · 88 quai Perrache, 69002</span>
+                  <span class="sh-mono">18 min</span>
+                </button>
+                <button type="button" class="sh-locator__sugg" data-sugg="Place Bellecour, 69002 Lyon">
+                  <span><i class="fa-regular fa-clock"></i> Place Bellecour, 69002</span>
+                  <span class="sh-mono">24 min</span>
+                </button>
+              </div>
+            </div>
+
+            <button type="submit" class="sh-btn sh-btn--primary sh-btn--block" style="margin-top:22px;padding:14px 24px;font-size:14px;">CONTINUER <i class="fa-solid fa-arrow-right"></i></button>
+          </form>
+        </div>
+
+        <div class="sh-zonebox__right">
+          <img src="img/image.png" alt="Carte de la zone de livraison Lyon" />
+          <div class="sh-card sh-zonebox__zonecard">
+            <div style="padding:14px;">
+              <span class="sh-mono" style="font-size:10px;letter-spacing:.16em;color:var(--sh-text-muted);">ZONE LIVRAISON</span>
+              <div style="font-family:var(--sh-font-display);font-size:22px;margin-top:4px;">LYON 1 · 2 · 3 · 6 · 7</div>
+              <div class="sh-mono" style="font-size:11px;margin-top:6px;">Rayon 3,2 km depuis le diner · 11h30→22h45</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════ MODAL ZONE OK (après soumission) ════════ -->
+  <div class="sh-locator" id="zoneOkModal" role="dialog" aria-modal="true" aria-labelledby="zoneOkTitle">
+    <div class="sh-locator__backdrop" data-zone-close></div>
+    <div class="sh-locator__card sh-card" role="document">
+      <div class="sh-locator__head">
+        <span class="sh-mono" style="font-size:11px;letter-spacing:.18em;color:var(--sh-success);">★ ZONE OK · ON LIVRE CHEZ TOI</span>
+        <button type="button" class="sh-modal__close" data-zone-close aria-label="Fermer"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <div class="sh-zonebox">
+        <div class="sh-zonebox__left">
+          <h2 id="zoneOkTitle" style="font-family:var(--sh-font-display);font-size:clamp(32px,4.5vw,48px);line-height:.95;margin:0;">PARFAIT.<br/><span style="color:var(--sh-red)">22 MIN</span><br/>ET T'ES SERVI.</h2>
+          <p style="font-size:15px;color:var(--sh-text-muted);margin-top:14px;max-width:380px;">
+            On t'a localisé : <b id="zoneOkAddress" style="color:var(--sh-ink)">12 rue Mercière, 69002 Lyon</b>. Livraison estimée en 22 min — un livreur est dispo maintenant.
+          </p>
+
+          <div class="sh-card" style="padding:16px;margin-top:22px;background:var(--sh-mustard);">
+            <div style="display:flex;justify-content:space-between;align-items:start;gap:16px;">
+              <div>
+                <span class="sh-mono" style="font-size:10px;letter-spacing:.18em;">LIVRAISON</span>
+                <div style="font-family:var(--sh-font-display);font-size:24px;margin-top:6px;">22 MIN · GRATUITE DÈS 25 €</div>
+                <div style="font-size:13px;margin-top:4px;">Shift ouvert jusqu'à 22h45 · 2,90 € en dessous</div>
+              </div>
+              <div style="width:56px;height:56px;border-radius:12px;background:var(--sh-ink);color:var(--sh-cream);display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;">
+                <i class="fa-solid fa-truck-fast"></i>
+              </div>
+            </div>
+          </div>
+
+          <a href="configurateur.html" class="sh-btn sh-btn--primary sh-btn--block" style="margin-top:18px;padding:14px 24px;font-size:14px;">EMPILE TON BURGER <i class="fa-solid fa-arrow-right"></i></a>
+          <button type="button" class="sh-btn sh-btn--ghost sh-btn--block" data-zone-close style="margin-top:8px;font-size:13px;">CONTINUER SUR LE SITE</button>
+        </div>
+
+        <div class="sh-zonebox__right">
+          <img src="img/image.png" alt="Carte de la zone de livraison Lyon" />
+          <div class="sh-card sh-zonebox__zonecard">
+            <div style="padding:14px;">
+              <span class="sh-mono" style="font-size:10px;letter-spacing:.16em;color:var(--sh-text-muted);">ZONE LIVRAISON</span>
+              <div style="font-family:var(--sh-font-display);font-size:22px;margin-top:4px;">LYON 1 · 2 · 3 · 6 · 7</div>
+              <div class="sh-mono" style="font-size:11px;margin-top:6px;">Rayon 3,2 km depuis le diner · 11h30→22h45</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════ MODAL HORS ZONE (after soumission KO) ════════ -->
+  <div class="sh-locator" id="zoneKoModal" role="dialog" aria-modal="true" aria-labelledby="zoneKoTitle">
+    <div class="sh-locator__backdrop" data-zone-close></div>
+    <div class="sh-locator__card sh-card" role="document" style="box-shadow:14px 14px 0 0 var(--sh-red);">
+      <div class="sh-locator__head" style="background:var(--sh-red);">
+        <span class="sh-mono" style="font-size:11px;letter-spacing:.18em;">★ AÏE — HORS ZONE LIVRAISON</span>
+        <button type="button" class="sh-modal__close" data-zone-close aria-label="Fermer"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <div class="sh-zonebox">
+        <div class="sh-zonebox__left">
+          <h2 id="zoneKoTitle" style="font-family:var(--sh-font-display);font-size:clamp(32px,4.5vw,48px);line-height:.95;margin:0;">HMM, ON NE<br/>LIVRE PAS<br/><span style="color:var(--sh-red)">(ENCORE)</span> CHEZ TOI.</h2>
+          <p style="font-size:15px;color:var(--sh-text-muted);margin-top:14px;max-width:460px;">
+            <b id="zoneKoAddress" style="color:var(--sh-ink)">Cette adresse</b> est hors zone — mais ne range pas tes couverts : le retrait est à <b>8 minutes en métro</b> du diner. La file est plus courte que ta playlist préférée.
+          </p>
+
+          <div class="sh-card" style="padding:22px;margin-top:22px;background:var(--sh-mustard);">
+            <div style="display:flex;justify-content:space-between;align-items:start;gap:16px;">
+              <div>
+                <span class="sh-mono" style="font-size:10px;letter-spacing:.18em;">ALTERNATIVE INSTANTANÉE</span>
+                <div style="font-family:var(--sh-font-display);font-size:24px;margin-top:6px;">CLICK &amp; COLLECT</div>
+                <div style="font-size:13px;margin-top:4px;">Prêt en <b>15 min</b> · récupère au diner</div>
+              </div>
+              <div style="width:56px;height:56px;border-radius:12px;background:var(--sh-ink);color:var(--sh-cream);display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;">
+                <i class="fa-solid fa-shop"></i>
+              </div>
+            </div>
+            <a href="configurateur.html" class="sh-btn sh-btn--primary sh-btn--block" style="margin-top:14px;">BASCULER EN CLICK &amp; COLLECT <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+
+          <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
+            <button type="button" class="sh-btn sh-btn--ghost sh-btn--sm"><i class="fa-regular fa-bell"></i> PRÉVIENS-MOI</button>
+            <button type="button" class="sh-btn sh-btn--ghost sh-btn--sm" data-zone-retry>CHANGER D'ADRESSE</button>
+          </div>
+        </div>
+
+        <div class="sh-zonebox__ko-right">
+          <span class="sh-tag" style="color:var(--sh-mustard);">LE DINER</span>
+          <h3 style="font-family:var(--sh-font-display);font-size:32px;margin:6px 0 0;color:var(--sh-cream);">12 RUE<br/>MERCIÈRE</h3>
+          <p class="sh-mono" style="font-size:12px;margin:8px 0 0;letter-spacing:.14em;opacity:.9;">69002 LYON · M° CORDELIERS</p>
+
+          <div style="margin-top:20px;display:grid;grid-template-columns:repeat(2,1fr);gap:10px;">
+            <div class="sh-zonebox__ko-stat"><span class="lbl">DISTANCE</span><div class="v">8 min</div><span class="sub">métro A</span></div>
+            <div class="sh-zonebox__ko-stat"><span class="lbl">PRÊT EN</span><div class="v">15 min</div></div>
+            <div class="sh-zonebox__ko-stat"><span class="lbl">OUVERT</span><div class="v">23h00</div></div>
+            <div class="sh-zonebox__ko-stat"><span class="lbl">FRAIS</span><div class="v">0 €</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════ HERO + NAV ════════ -->
+  <header class="sh-hero">
+    <nav class="sh-nav sh-nav--dark" aria-label="Navigation principale">
+      <a class="sh-nav__brand" href="index.html" aria-label="Accueil Stack House">
+        <span class="sh-nav__logo">SH</span>
+        <span>
+          <span class="sh-nav__brand-text">STACK HOUSE</span><br/>
+          <span class="sh-nav__brand-sub">METS CE QUE TU VEUX</span>
+        </span>
+      </a>
+
+      <div class="sh-nav__cta">
+        <span class="sh-chip sh-chip--must sh-nav__cta-zone">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i> 69002 LYON · 22 MIN
+        </span>
+        <a href="compte.html" class="sh-btn sh-btn--sm sh-nav__cta-account" style="background:transparent;color:var(--sh-cream);border-color:var(--sh-cream);">
+          <i class="fa-regular fa-user" aria-hidden="true"></i> COMPTE
+        </a>
+        <a href="panier.html" class="sh-btn sh-btn--sm sh-btn--primary" id="navCart">
+          <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i> <span id="cartCount">3</span> · 28,90 €
+        </a>
+      </div>
+    </nav>
+
+    <div class="sh-wrap sh-hero__grid">
+      <div class="sh-hero__copy">
+        <div class="sh-hero__kickers">
+          <span class="sh-chip sh-chip--neon">★ EST. 2026 · LYON</span>
+          <span class="sh-mono sh-hero__sub">FREE-STACK BURGERS</span>
+        </div>
+
+        <h1 class="sh-hero__title">
+          METS<br/>
+          <span class="t-mustard">CE QUE</span><br/>
+          <span class="sh-shade t-pink">TU VEUX.</span>
+        </h1>
+
+        <p class="sh-hero__lede">
+          Construis ton burger sans limite. <b class="t-mustard">Tous les ingrédients sont inclus dans le même prix.</b> Pas de supplément caché, pas de petite ligne. Empile, on s'occupe du reste.
+        </p>
+
+        <div class="sh-hero__ctas">
+          <a class="sh-btn sh-btn--primary sh-btn--lg" href="configurateur.html">
+            EMPILE TON BURGER <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+          <a class="sh-btn sh-btn--on-dark" href="menu.html">VOIR LE MENU</a>
+        </div>
+
+        <div class="sh-hero__meta">
+          <span class="sh-mono">★★★★★ 4,9 SUR 1 247 AVIS</span>
+          <span class="sh-hero__sep" aria-hidden="true"></span>
+          <span class="sh-mono">LIVRÉ EN 22 MIN · LYON 1·2·6·7</span>
+        </div>
+      </div>
+
+      <!-- Burger vignette -->
+      <div class="sh-hero__visual" aria-hidden="true">
+        <div class="sh-hero__disc">
+          <img src="img/image.png" alt="" class="sh-hero__photo" />
+          <div class="sh-hero__sticker" aria-hidden="true">TOUT<br/>EST<br/>INCLUS<br/>★</div>
+          <span class="sh-chip sh-chip--must sh-hero__badge sh-hero__badge--tl">★ HOUSE SPECIAL</span>
+          <span class="sh-chip sh-chip--neon sh-hero__badge sh-hero__badge--br">14,90 € · TOUT COMPRIS</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Marquee -->
+    <div class="sh-marquee" aria-hidden="true">
+      <div class="sh-marquee__track">
+        <span>★ METS CE QUE TU VEUX ★ TOUT INCLUS ★ AUCUNE LIMITE ★ MÊME PRIX ★ EMPILE LIBRE ★ NO BS ★ METS CE QUE TU VEUX ★ TOUT INCLUS ★ AUCUNE LIMITE ★</span>
+        <span>★ METS CE QUE TU VEUX ★ TOUT INCLUS ★ AUCUNE LIMITE ★ MÊME PRIX ★ EMPILE LIBRE ★ NO BS ★ METS CE QUE TU VEUX ★ TOUT INCLUS ★ AUCUNE LIMITE ★</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ════════ CONCEPT ════════ -->
+  <section class="sh-section sh-concept" id="concept">
+    <div class="sh-wrap sh-concept__grid">
+      <div>
+        <span class="sh-tag">01 · NOTRE CONCEPT</span>
+        <h2 class="sh-concept__title">UN PRIX.<br/>ZÉRO<br/>SUPPLÉMENT.</h2>
+      </div>
+      <div>
+        <p class="sh-concept__lede">
+          On en avait marre des menus piégeux. Chez Stack House, tu paies un burger — point. Le bacon, le double steak, la sauce maison, l'œuf, l'oignon caramélisé : <b>tout est dans le prix</b>. La carte est honnête, le burger est à toi.
+        </p>
+        <div class="sh-concept__bullets">
+          <article class="sh-card">
+            <div class="sh-display sh-concept__num">01</div>
+            <div class="sh-bungee sh-concept__bt">EMPILE LIBRE</div>
+            <p class="sh-concept__bd">Plus de 24 ingrédients, dans l'ordre que tu veux.</p>
+          </article>
+          <article class="sh-card">
+            <div class="sh-display sh-concept__num">02</div>
+            <div class="sh-bungee sh-concept__bt">PRIX FIXE</div>
+            <p class="sh-concept__bd">14,90 € le burger, peu importe ce que tu mets dedans.</p>
+          </article>
+          <article class="sh-card">
+            <div class="sh-display sh-concept__num">03</div>
+            <div class="sh-bungee sh-concept__bt">PAS DE PIÈGE</div>
+            <p class="sh-concept__bd">Aucun supplément. Promis. Garanti par contrat.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ HOW IT WORKS — 4 STEPS ════════ -->
+  <section class="sh-section sh-steps">
+    <div class="sh-wrap">
+      <span class="sh-tag" style="color:var(--sh-mustard)">02 · COMMENT ÇA MARCHE</span>
+      <h2 class="sh-steps__title">4 ÉTAPES. <span class="t-mustard">4 MINUTES.</span></h2>
+
+      <div class="sh-steps__grid">
+        <article class="sh-stepc">
+          <span class="sh-mono sh-stepc__n">STEP 01</span>
+          <div class="sh-stepc__icon"><i class="fa-solid fa-bread-slice" aria-hidden="true"></i></div>
+          <h3 class="sh-stepc__t">PAIN</h3>
+          <p class="sh-stepc__d">Brioché, sésame, charbon, sans gluten.</p>
+        </article>
+        <article class="sh-stepc">
+          <span class="sh-mono sh-stepc__n">STEP 02</span>
+          <div class="sh-stepc__icon"><i class="fa-solid fa-drumstick-bite" aria-hidden="true"></i></div>
+          <h3 class="sh-stepc__t">PROTÉINE</h3>
+          <p class="sh-stepc__d">Bœuf, poulet, veggie, fish — solo, double, triple.</p>
+        </article>
+        <article class="sh-stepc">
+          <span class="sh-mono sh-stepc__n">STEP 03</span>
+          <div class="sh-stepc__icon"><i class="fa-solid fa-leaf" aria-hidden="true"></i></div>
+          <h3 class="sh-stepc__t">GARNITURES</h3>
+          <p class="sh-stepc__d">Cheddars, légumes, croquant — autant que tu veux.</p>
+        </article>
+        <article class="sh-stepc">
+          <span class="sh-mono sh-stepc__n">STEP 04</span>
+          <div class="sh-stepc__icon"><i class="fa-solid fa-pen-nib" aria-hidden="true"></i></div>
+          <h3 class="sh-stepc__t">SAUCE &amp; NOM</h3>
+          <p class="sh-stepc__d">Choisis ta sauce, nomme ton burger.</p>
+        </article>
+      </div>
+
+      <div class="sh-steps__cta">
+        <a class="sh-btn sh-btn--mustard sh-btn--lg" href="configurateur.html">JE COMMENCE <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        <span class="sh-mono sh-steps__note">↳ AUCUNE CRÉATION DE COMPTE OBLIGATOIRE</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ HOUSE SPECIALS ════════ -->
+  <section class="sh-section sh-specials">
+    <div class="sh-wrap">
+      <header class="sh-specials__head">
+        <div>
+          <span class="sh-tag">03 · QUELQUES INCONTOURNABLES</span>
+          <h2 class="sh-specials__title">HOUSE SPECIALS<span class="sh-dot">.</span></h2>
+        </div>
+        <a class="sh-btn sh-btn--ghost" href="menu.html">VOIR TOUT LE MENU <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      </header>
+
+      <div class="sh-pgrid sh-pgrid--4">
+        <article class="sh-pcard">
+          <div class="sh-pcard__media">
+            <img src="img/image.png" alt="The Stack — triple steak burger" />
+            <span class="sh-pcard__badge">★ #1</span>
+          </div>
+          <div class="sh-pcard__body">
+            <span class="sh-pcard__tag">POPULAIRE · ★</span>
+            <h3 class="sh-pcard__title">THE STACK</h3>
+            <p class="sh-pcard__desc">Triple steak · double cheddar · bacon · oignons frits</p>
+            <div class="sh-pcard__foot">
+              <span class="sh-pcard__price">14,90 €</span>
+              <button class="sh-pcard__add" aria-label="Ajouter au panier">+</button>
+            </div>
+          </div>
+        </article>
+        <article class="sh-pcard">
+          <div class="sh-pcard__media">
+            <img src="img/image.png" alt="The Birdie — poulet burger" />
+          </div>
+          <div class="sh-pcard__body">
+            <span class="sh-pcard__tag">CLUB</span>
+            <h3 class="sh-pcard__title">THE BIRDIE</h3>
+            <p class="sh-pcard__desc">Poulet croustillant · coleslaw · sauce buffalo</p>
+            <div class="sh-pcard__foot">
+              <span class="sh-pcard__price">14,90 €</span>
+              <button class="sh-pcard__add" aria-label="Ajouter au panier">+</button>
+            </div>
+          </div>
+        </article>
+        <article class="sh-pcard sh-pcard--fries">
+          <div class="sh-pcard__media">
+            <img src="img/image.png" alt="The Green — burger veggie" />
+          </div>
+          <div class="sh-pcard__body">
+            <span class="sh-pcard__tag">VEGGIE</span>
+            <h3 class="sh-pcard__title">THE GREEN</h3>
+            <p class="sh-pcard__desc">Steak champignon · avocat · pickles · sauce verte</p>
+            <div class="sh-pcard__foot">
+              <span class="sh-pcard__price">14,90 €</span>
+              <button class="sh-pcard__add" aria-label="Ajouter au panier">+</button>
+            </div>
+          </div>
+        </article>
+        <article class="sh-pcard sh-pcard--drink">
+          <div class="sh-pcard__media">
+            <img src="img/image.png" alt="The Wave — burger poisson" />
+          </div>
+          <div class="sh-pcard__body">
+            <span class="sh-pcard__tag">FISH</span>
+            <h3 class="sh-pcard__title">THE WAVE</h3>
+            <p class="sh-pcard__desc">Poisson pané maison · sauce tartare · roquette</p>
+            <div class="sh-pcard__foot">
+              <span class="sh-pcard__price">14,90 €</span>
+              <button class="sh-pcard__add" aria-label="Ajouter au panier">+</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ INFO BAND ════════ -->
+  <section class="sh-section sh-info" style="background:var(--sh-cream-2);">
+    <div class="sh-wrap">
+      <div class="sh-info__grid">
+        <article>
+          <h3 class="sh-info__t">TOUT INCLUS<span class="sh-dot">.</span></h3>
+          <p class="sh-info__d">Prix unique 14,90 €. Zéro supplément. Promis.</p>
+        </article>
+        <article>
+          <h3 class="sh-info__t">LIVRÉ EN 25 MIN<span class="sh-dot">.</span></h3>
+          <p class="sh-info__d">Sous nos zones. Sinon click &amp; collect en 8 min.</p>
+        </article>
+        <article>
+          <h3 class="sh-info__t">SAUVÉ ET REJOUÉ<span class="sh-dot">.</span></h3>
+          <p class="sh-info__d">Tes stacks favoris re-commandés en 1 clic.</p>
+        </article>
+        <article>
+          <h3 class="sh-info__t">PAYE COMME TU VEUX<span class="sh-dot">.</span></h3>
+          <p class="sh-info__d">CB, Apple Pay, Google Pay, tickets resto.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ FOOTER ════════ -->
+  <footer class="sh-footer" id="contact">
+    <div class="sh-footer__grid">
+      <div>
+        <a class="sh-footer__logo" href="index.html" aria-label="Retour à l'accueil">STACK<br/>HOUSE</a>
+        <div class="sh-mono" style="margin-top:8px;letter-spacing:.16em;opacity:.85;">METS CE QUE TU VEUX · DEPUIS 2026</div>
+      </div>
+      <div>
+        <h4>LE DINER</h4>
+        <ul>
+          <li>12 rue Mercière</li>
+          <li>69002 Lyon</li>
+          <li>11h30 → 23h00</li>
+          <li>Tous les jours</li>
+        </ul>
+      </div>
+      <div>
+        <h4>CONTACT</h4>
+        <ul>
+          <li><a href="mailto:hello@stackhouse.fr">hello@stackhouse.fr</a></li>
+          <li>+33 4 78 00 00 00</li>
+          <li><a href="#">@stackhouse.diner</a></li>
+          <li><a href="#">Press kit</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>MENTIONS</h4>
+        <ul>
+          <li><a href="#">CGU</a></li>
+          <li><a href="#">Politique cookies</a></li>
+          <li><a href="#">Allergènes</a></li>
+          <li><a href="#">Plan du site</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="sh-hr-dashed" style="border-color:var(--sh-cream);opacity:.4;margin:32px 0 18px;" />
+    <div class="sh-footer__bottom">
+      <span>© 2026 STACK HOUSE — STACK FREELY, EAT LOUDLY</span>
+      <span>★ NO SUPPLÉMENTS · NO BS ★</span>
+    </div>
+  </footer>
+
+  <script src="js/nav.js" defer></script>
+  <script src="js/reveal.js" defer></script>
+  <script src="js/locator.js" defer></script>
+</body>
+</html>

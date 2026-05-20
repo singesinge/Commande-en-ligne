@@ -1,0 +1,84 @@
+/* STACK HOUSE — Design Tokens
+   Diner américain modernisé. Variables CSS partagées sur tout le site. */
+
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bungee&family=Bungee+Shade&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap");
+
+:root {
+  /* Couleurs primaires */
+  --sh-cream:        #F4ECD8;
+  --sh-cream-2:      #ECE0C2;
+  --sh-ink:          #1A130E;
+  --sh-ink-2:        #2A1E15;
+  --sh-red:          #C8252B;
+  --sh-red-deep:     #9A1A1F;
+  --sh-mustard:      #E8B547;
+  --sh-mustard-deep: #C4912A;
+  --sh-pickle:       #4F6B33;
+  --sh-chrome:       #CFCFD3;
+  --sh-chrome-2:     #9FA0A5;
+  --sh-neon-pink:    #FF4F86;
+  --sh-neon-cyan:    #67E0E8;
+
+  /* Sémantique */
+  --sh-bg:           var(--sh-cream);
+  --sh-surface:      #FBF6E9;
+  --sh-text:         var(--sh-ink);
+  --sh-text-muted:   #5A4A3A;
+  --sh-text-soft:    #8B7B68;
+  --sh-success:      #2E7D4C;
+  --sh-error:        #B43022;
+  --sh-warning:      var(--sh-mustard-deep);
+  --sh-border:       #1A130E;
+  --sh-border-soft:  rgba(26,19,14,0.18);
+
+  /* Type */
+  --sh-font-display: "Alfa Slab One", "Times New Roman", serif;
+  --sh-font-sub:     "Bungee", system-ui, sans-serif;
+  --sh-font-shade:   "Bungee Shade", system-ui, sans-serif;
+  --sh-font-body:    "Space Grotesk", system-ui, sans-serif;
+  --sh-font-mono:    "Space Mono", "JetBrains Mono", monospace;
+
+  /* Radius */
+  --sh-r-sm: 6px;
+  --sh-r-md: 10px;
+  --sh-r-lg: 16px;
+  --sh-r-xl: 24px;
+  --sh-r-pill: 999px;
+
+  /* Shadows */
+  --sh-shadow-hard:    4px 4px 0 0 var(--sh-ink);
+  --sh-shadow-hard-lg: 8px 8px 0 0 var(--sh-ink);
+  --sh-shadow-soft:    0 4px 18px rgba(26,19,14,0.10);
+  --sh-shadow-neon:    0 0 18px rgba(255,79,134,0.55);
+
+  /* Spacing scale (base 4) */
+  --sh-s-1: 4px;
+  --sh-s-2: 8px;
+  --sh-s-3: 12px;
+  --sh-s-4: 16px;
+  --sh-s-5: 24px;
+  --sh-s-6: 32px;
+  --sh-s-7: 48px;
+  --sh-s-8: 64px;
+  --sh-s-9: 96px;
+}
+
+/* Patterns réutilisables */
+.sh-checker {
+  background-image:
+    linear-gradient(45deg, var(--sh-ink) 25%, transparent 25%),
+    linear-gradient(-45deg, var(--sh-ink) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--sh-ink) 75%),
+    linear-gradient(-45deg, transparent 75%, var(--sh-ink) 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0;
+  background-color: var(--sh-cream);
+}
+.sh-stripe-warn {
+  background: repeating-linear-gradient(45deg, var(--sh-mustard) 0 14px, var(--sh-ink) 14px 28px);
+}
+.sh-paper {
+  background: var(--sh-cream);
+  background-image: radial-gradient(rgba(26,19,14,0.05) 1px, transparent 1px);
+  background-size: 6px 6px;
+}

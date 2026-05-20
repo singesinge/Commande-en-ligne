@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Checkout — Stack House</title>
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <nav class="sh-nav" aria-label="Navigation principale">
+    <a class="sh-nav__brand" href="index.html" aria-label="Accueil Stack House">
+      <span class="sh-nav__logo">SH</span>
+      <span><span class="sh-nav__brand-text">STACK HOUSE</span><br/><span class="sh-nav__brand-sub">METS CE QUE TU VEUX</span></span>
+    </a>
+    <div class="sh-nav__cta">
+      <span class="sh-chip sh-nav__cta-zone"><i class="fa-solid fa-location-dot"></i> 69002 LYON · 22 MIN</span>
+      <a href="compte.html" class="sh-btn sh-btn--sm sh-nav__cta-account"><i class="fa-regular fa-user"></i> COMPTE</a>
+      <a href="panier.html" class="sh-btn sh-btn--sm sh-btn--primary"><i class="fa-solid fa-bag-shopping"></i> <span id="cartCount">3</span> · 47,10 €</a>
+    </div>
+  </nav>
+
+  <section class="sh-wrap sh-banner">
+    <span class="sh-tag">07 · CHECKOUT</span>
+    <h1>UNE DERNIÈRE CHOSE.</h1>
+  </section>
+
+  <form class="sh-wrap sh-checkout-grid" novalidate onsubmit="event.preventDefault(); window.location.href='succes.html';">
+    <div style="display:flex;flex-direction:column;gap:22px;">
+
+      <!-- SECTION 1 — QUI -->
+      <section class="sh-csection">
+        <header class="sh-csection__head">
+          <span class="sh-csection__num">1</span>
+          <h2 class="sh-csection__t">QUI EST-CE QU'ON SERT ?</h2>
+        </header>
+        <div class="sh-form-grid sh-form-grid--2">
+          <div><label class="sh-label">Prénom</label><input class="sh-input" type="text" value="Léo" autocomplete="given-name" /></div>
+          <div><label class="sh-label">Téléphone</label><input class="sh-input" type="tel" value="06 12 34 56 78" autocomplete="tel" /></div>
+          <div class="full"><label class="sh-label">Email · pour le ticket</label><input class="sh-input" type="email" value="leo@example.fr" autocomplete="email" /></div>
+        </div>
+
+        <label class="sh-check">
+          <span class="sh-check__box"><i class="fa-solid fa-check"></i></span>
+          <span>
+            <span class="sh-check__t">Créer mon compte d'un clic (recommandé)</span>
+            <span class="sh-check__d">On garde tes stacks, ton adresse et tes infos de paiement. Pas de mot de passe — un magic link par email à chaque retour.</span>
+          </span>
+        </label>
+      </section>
+
+      <!-- SECTION 2 — OÙ -->
+      <section class="sh-csection">
+        <header class="sh-csection__head" style="justify-content:space-between;">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <span class="sh-csection__num">2</span>
+            <h2 class="sh-csection__t">OÙ ON LIVRE ?</h2>
+          </div>
+          <span class="sh-inline-ok"><i class="fa-solid fa-check"></i> ZONE OK · 22 MIN</span>
+        </header>
+        <div class="sh-form-grid sh-form-grid--2">
+          <div><label class="sh-label">Adresse</label><input class="sh-input" value="12 rue Mercière" autocomplete="street-address" /></div>
+          <div><label class="sh-label">Étage / digicode</label><input class="sh-input" placeholder="3ème · A4521" /></div>
+          <div class="full"><label class="sh-label">Indications livreur (facultatif)</label><input class="sh-input" placeholder="Sonner à Léo. Sonnette HS, frappe fort." /></div>
+        </div>
+      </section>
+
+      <!-- SECTION 3 — PAIEMENT -->
+      <section class="sh-csection">
+        <header class="sh-csection__head">
+          <span class="sh-csection__num">3</span>
+          <h2 class="sh-csection__t">PAIEMENT</h2>
+        </header>
+        <div class="sh-form-grid sh-form-grid--4">
+          <button type="button" class="sh-paychoice is-active"><i class="fa-regular fa-credit-card"></i> CARTE</button>
+          <button type="button" class="sh-paychoice"><i class="fa-brands fa-apple-pay"></i> APPLE PAY</button>
+          <button type="button" class="sh-paychoice"><i class="fa-brands fa-google-pay"></i> GOOGLE PAY</button>
+          <button type="button" class="sh-paychoice"><i class="fa-solid fa-ticket"></i> TICKET RESTO</button>
+        </div>
+
+        <div class="sh-form-grid sh-form-grid--3" style="margin-top:16px;">
+          <div><label class="sh-label">Numéro de carte</label><input class="sh-input" value="4242 4242 4242 4242" inputmode="numeric" /></div>
+          <div><label class="sh-label">Exp</label><input class="sh-input" placeholder="12/28" inputmode="numeric" /></div>
+          <div><label class="sh-label">CVC</label><input class="sh-input" placeholder="•••" inputmode="numeric" /></div>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:8px;margin-top:14px;color:var(--sh-text-muted);">
+          <i class="fa-solid fa-lock"></i>
+          <span class="sh-mono" style="font-size:11px;letter-spacing:.12em;">PAIEMENT SÉCURISÉ STRIPE · 3D SECURE</span>
+        </div>
+      </section>
+    </div>
+
+    <!-- SUMMARY -->
+    <aside>
+      <div class="sh-card sh-summary">
+        <span class="sh-tag">RÉCAP</span>
+        <h2 class="sh-summary__title" style="font-size:24px;">TA COMMANDE</h2>
+
+        <div class="sh-summary__rows">
+          <div><span class="k">« THE LOUD » ×1</span><span class="v">14,90 €</span></div>
+          <div><span class="k">THE BIRDIE ×2</span><span class="v">29,80 €</span></div>
+          <div><span class="k">FRIES MAISON ×1</span><span class="v">4,50 €</span></div>
+          <div><span class="k">Livraison</span><span class="v">2,90 €</span></div>
+          <div><span class="k">Code FIRSTSTACK</span><span class="v" style="color:var(--sh-success)">−5,00 €</span></div>
+        </div>
+        <hr class="sh-hr-dashed" style="margin:14px 0;" />
+        <div class="sh-summary__total">
+          <span class="sh-bungee" style="font-size:13px;">TOTAL</span>
+          <span class="num" style="font-size:32px;">47,10 €</span>
+        </div>
+
+        <button type="submit" class="sh-btn sh-btn--primary sh-btn--block" style="margin-top:16px;padding:14px;">PAYER 47,10 €</button>
+        <p class="sh-mono" style="font-size:10px;letter-spacing:.14em;color:var(--sh-text-muted);text-align:center;margin:8px 0 0;">↳ ESTIMATION LIVRAISON · 22 MIN APRÈS PAIEMENT</p>
+      </div>
+    </aside>
+  </form>
+
+  <footer class="sh-footer">
+    <div class="sh-footer__grid">
+      <div><a class="sh-footer__logo" href="index.html" aria-label="Retour à l'accueil">STACK<br/>HOUSE</a><div class="sh-mono" style="margin-top:8px;letter-spacing:.16em;opacity:.85;">METS CE QUE TU VEUX · DEPUIS 2026</div></div>
+      <div><h4>LE DINER</h4><ul><li>12 rue Mercière</li><li>69002 Lyon</li></ul></div>
+      <div><h4>CONTACT</h4><ul><li><a href="mailto:hello@stackhouse.fr">hello@stackhouse.fr</a></li></ul></div>
+      <div><h4>MENTIONS</h4><ul><li><a href="#">CGU</a></li></ul></div>
+    </div>
+    <hr class="sh-hr-dashed" style="border-color:var(--sh-cream);opacity:.4;margin:32px 0 18px;" />
+    <div class="sh-footer__bottom"><span>© 2026 STACK HOUSE</span><span>★ NO BS ★</span></div>
+  </footer>
+
+  <script src="js/nav.js" defer></script>
+  <script>
+    // Active la pastille de mode de paiement
+    document.querySelectorAll('.sh-paychoice').forEach((b) => {
+      b.addEventListener('click', () => {
+        document.querySelectorAll('.sh-paychoice').forEach(x => x.classList.remove('is-active'));
+        b.classList.add('is-active');
+      });
+    });
+  </script>
+</body>
+</html>
