@@ -172,7 +172,7 @@ label.sh-label {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 64px;
+  padding: 16px 80px;
   background: transparent;
   color: var(--sh-ink);
   border-bottom: 2px solid var(--sh-ink);
@@ -199,7 +199,7 @@ label.sh-label {
 .sh-nav__cta { display: flex; gap: 12px; align-items: center; flex-shrink: 0; flex-wrap: wrap; }
 
 @media (max-width: 1024px) {
-  .sh-nav { padding: 14px 32px; }
+  .sh-nav { padding: 14px 40px; }
   .sh-nav__cta .sh-nav__cta-account { display: none; }
 }
 @media (max-width: 640px) {

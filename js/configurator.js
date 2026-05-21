@@ -165,8 +165,23 @@
     if (chip) chip.textContent = `★ ${total}/${MAX_MEATS} PROTÉINE${total > 1 ? 'S' : ''}` + (reached ? ' · MAX ATTEINT' : ' · CLIQUE POUR AJOUTER');
   }
 
+  function decrementMeat(id) {
+    const cur = state.meats[id] || 0;
+    if (cur <= 1) delete state.meats[id];
+    else state.meats[id] = cur - 1;
+    refreshMeatUI();
+    renderStack();
+  }
+
   $$('#meatGrid .sh-ing').forEach((btn) => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (e) => {
+      // Le clic sur le "−" décrémente plutôt qu'ajouter
+      if (e.target.closest('[data-meat-minus]')) {
+        e.preventDefault();
+        e.stopPropagation();
+        decrementMeat(btn.dataset.meat);
+        return;
+      }
       const id = btn.dataset.meat;
       const total = meatTotal();
       if (total >= MAX_MEATS) return;
@@ -176,13 +191,19 @@
     });
     btn.addEventListener('contextmenu', (e) => {
       e.preventDefault();
-      const id = btn.dataset.meat;
-      const cur = state.meats[id] || 0;
-      if (cur <= 1) delete state.meats[id];
-      else state.meats[id] = cur - 1;
-      refreshMeatUI();
-      renderStack();
+      decrementMeat(btn.dataset.meat);
     });
+    // Support clavier sur le "−"
+    const minus = btn.querySelector('[data-meat-minus]');
+    if (minus) {
+      minus.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          e.stopPropagation();
+          decrementMeat(btn.dataset.meat);
+        }
+      });
+    }
   });
 
   // ── Step 3 · Garnitures (clic = toggle, double-clic = +2)
