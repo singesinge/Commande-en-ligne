@@ -1,5 +1,29 @@
 /* Panier : si on a un stack généré dans le configurateur, on l'ajoute en tête de la liste. */
 (function () {
+  // ── Stepper COUVERTS ────────────────────────────────────
+  const couvertsLine = document.querySelector('[data-line-type="couverts"]');
+  if (couvertsLine) {
+    const qtyEl = couvertsLine.querySelector('[data-couverts-qty]');
+    const priceEl = couvertsLine.querySelector('[data-couverts-price]');
+    const summaryEl = document.querySelector('[data-summary-couverts]');
+    const summaryLine = document.querySelector('[data-summary-couverts-line]');
+    const unitPrice = 0.50;
+    let qty = parseInt(qtyEl?.textContent || '2', 10);
+    const render = () => {
+      if (qtyEl) qtyEl.textContent = String(qty).padStart(2, '0');
+      if (priceEl) priceEl.textContent = (qty * unitPrice).toFixed(2).replace('.', ',') + ' €';
+      if (summaryEl) summaryEl.textContent = (qty * unitPrice).toFixed(2).replace('.', ',') + ' €';
+      if (summaryLine) summaryLine.querySelector('.k').textContent = `Couverts bio × ${qty}`;
+    };
+    render();
+    couvertsLine.querySelector('[data-couverts-plus]')?.addEventListener('click', () => { if (qty < 20) { qty++; render(); } });
+    couvertsLine.querySelector('[data-couverts-minus]')?.addEventListener('click', () => { if (qty > 0) { qty--; render(); } });
+    couvertsLine.querySelector('[data-couverts-remove]')?.addEventListener('click', () => {
+      couvertsLine.remove();
+      if (summaryLine) summaryLine.remove();
+    });
+  }
+
   let cart = [];
   try { cart = JSON.parse(localStorage.getItem('sh.cart') || '[]'); } catch (e) {}
   if (!cart.length) return;

@@ -27,7 +27,7 @@
   display: flex; align-items: center; justify-content: center;
   position: relative;
 }
-.sh-build__visual img { border: 2px solid var(--sh-ink); border-radius: 12px; max-width: 90%; max-height: 240px; object-fit: cover; }
+.sh-build__visual img { border: 2px solid var(--sh-ink); border-radius: 12px; max-width: 90%; max-height: 240px; object-fit: contain; background: var(--sh-cream); padding: 8px; }
 
 /* Cross-sell row */
 .sh-xrow { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
@@ -40,7 +40,8 @@
 
 /* PANIER */
 .sh-cart-grid {
-  display: grid; grid-template-columns: 1.6fr 1fr; gap: 32px; padding: 40px 0;
+  display: grid; grid-template-columns: 1.6fr 1fr; gap: 32px;
+  padding-top: 40px; padding-bottom: 40px;
 }
 @media (max-width: 1024px) { .sh-cart-grid { grid-template-columns: 1fr; } }
 
@@ -56,7 +57,7 @@
   border-right: 2px solid var(--sh-ink);
   display: flex; align-items: center; justify-content: center;
 }
-.sh-line__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.sh-line__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; padding: 8px; }
 .sh-line__body { padding: 18px; min-width: 0; }
 .sh-line__title { font-family: var(--sh-font-display); font-size: 22px; margin: 0; display: inline-flex; gap: 8px; align-items: center; }
 .sh-line__sub   { font-size: 12px; color: var(--sh-text-muted); margin: 4px 0 0; }
@@ -83,7 +84,8 @@
 
 /* CHECKOUT */
 .sh-checkout-grid {
-  display: grid; grid-template-columns: 1.5fr 1fr; gap: 32px; padding: 36px 0;
+  display: grid; grid-template-columns: 1.5fr 1fr; gap: 32px;
+  padding-top: 36px; padding-bottom: 36px;
 }
 @media (max-width: 1024px) { .sh-checkout-grid { grid-template-columns: 1fr; } }
 .sh-csection {
@@ -246,7 +248,7 @@
   background: var(--sh-cream-2);
   border: 1.5px solid rgba(26, 19, 14, 0.08);
 }
-.sh-ing__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.sh-ing__media img { width: 100%; height: 100%; object-fit: contain; display: block; padding: 4px; }
 .sh-ing__head {
   position: absolute; top: 4px; left: 4px; right: 4px;
   display: flex; justify-content: space-between; align-items: flex-start;
@@ -325,8 +327,8 @@
   flex: 0 0 auto;
 }
 .sh-bun__media img {
-  width: 100%; height: 100%; object-fit: cover;
-  display: block;
+  width: 100%; height: 100%; object-fit: contain;
+  display: block; padding: 6px;
 }
 .sh-bun__badge {
   position: absolute; top: 8px; right: 8px;
@@ -401,7 +403,7 @@
   border: 1.5px solid rgba(26, 19, 14, 0.18);
   background: var(--sh-cream-2);
 }
-.sh-sauce__thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.sh-sauce__thumb img { width: 100%; height: 100%; object-fit: contain; display: block; padding: 2px; }
 .sh-sauce__name { flex: 1; min-width: 0; }
 
 /* OUT OF ZONE / DELIVERY MODAL */
@@ -416,7 +418,8 @@
 
 /* Account sidebar */
 .sh-account-grid {
-  display: grid; grid-template-columns: 260px 1fr; gap: 32px; padding: 40px 0;
+  display: grid; grid-template-columns: 260px 1fr; gap: 32px;
+  padding-top: 40px; padding-bottom: 40px;
 }
 @media (max-width: 860px) { .sh-account-grid { grid-template-columns: 1fr; } }
 
@@ -614,6 +617,59 @@ body.sh-locked { overflow: hidden; }
   .sh-locator__card { box-shadow: 8px 8px 0 0 var(--sh-mustard); }
   .sh-zonebox__right { display: none; }
 }
+
+/* Contact popup */
+.sh-contact-list { display: flex; flex-direction: column; gap: 10px; }
+.sh-contact-item {
+  display: flex; gap: 14px; align-items: center;
+  padding: 14px; border: 2px solid var(--sh-ink); border-radius: 12px;
+  background: var(--sh-cream); color: var(--sh-ink); text-decoration: none;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.sh-contact-item:hover { transform: translate(-2px,-2px); box-shadow: 4px 4px 0 0 var(--sh-mustard); }
+.sh-contact-item__icon {
+  flex: 0 0 44px; width: 44px; height: 44px; border-radius: 10px;
+  background: var(--sh-red); color: var(--sh-cream);
+  display: flex; align-items: center; justify-content: center; font-size: 18px;
+  border: 2px solid var(--sh-ink);
+}
+.sh-contact-item__body { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.sh-contact-item__v { font-family: var(--sh-font-display); font-size: 18px; line-height: 1; }
+.sh-contact-socials { display: flex; gap: 8px; margin-top: 8px; }
+.sh-contact-socials a {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--sh-ink); color: var(--sh-cream);
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 2px solid var(--sh-ink); box-shadow: 2px 2px 0 0 var(--sh-mustard);
+  font-size: 16px; transition: transform .12s ease;
+}
+.sh-contact-socials a:hover { transform: translate(-2px,-2px); box-shadow: 4px 4px 0 0 var(--sh-mustard); }
+
+/* Contact trigger button (remplace la chip d'adresse) */
+.sh-contact-trigger {
+  cursor: pointer;
+  border: 2px solid var(--sh-ink);
+  background: var(--sh-mustard); color: var(--sh-ink);
+  padding: 6px 12px; border-radius: var(--sh-r-pill);
+  font-family: var(--sh-font-mono); font-size: 11px;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  display: inline-flex; align-items: center; gap: 6px;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.sh-contact-trigger:hover { transform: translate(-1px,-1px); box-shadow: 2px 2px 0 0 var(--sh-ink); }
+.sh-nav--dark .sh-contact-trigger { background: var(--sh-mustard); color: var(--sh-ink); border-color: var(--sh-ink); }
+
+/* Restaurant card (C&C mode) */
+.sh-resto-card {
+  display: flex; gap: 14px; align-items: flex-start;
+  padding: 16px; background: var(--sh-mustard); border-radius: 12px;
+}
+.sh-resto-card__icon {
+  flex: 0 0 52px; width: 52px; height: 52px;
+  border-radius: 12px; background: var(--sh-ink); color: var(--sh-cream);
+  display: flex; align-items: center; justify-content: center; font-size: 22px;
+}
+.sh-resto-card__body { flex: 1; min-width: 0; }
 
 /* Mode segmented control */
 .sh-mode {

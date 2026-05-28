@@ -18,7 +18,7 @@
     <span><span class="sh-nav__brand-text">STACK HOUSE</span><br/><span class="sh-nav__brand-sub">METS CE QUE TU VEUX</span></span>
   </a>
   <div class="sh-nav__cta">
-    <span class="sh-chip sh-nav__cta-zone"><i class="fa-solid fa-location-dot"></i> 69002 LYON · 22 MIN</span>
+    <button type="button" class="sh-contact-trigger sh-nav__cta-zone"><i class="fa-regular fa-envelope"></i> CONTACT</button>
     <a href="compte.html" class="sh-btn sh-btn--sm sh-nav__cta-account"><i class="fa-regular fa-user"></i> COMPTE</a>
     <a href="panier.html" class="sh-btn sh-btn--sm sh-btn--primary"><i class="fa-solid fa-bag-shopping"></i> <span id="cartCount">3</span> · 28,90 €</a>
   </div>
@@ -74,7 +74,7 @@
       </div>
 
       <div class="sh-cfg__stack">
-        <img src="img/image.png" alt="Aperçu du burger" class="sh-cfg__heroimg" />
+        <img src="img/burger-hero.png" alt="Aperçu du burger" class="sh-cfg__heroimg" onerror="this.src='img/image.png';" />
       </div>
 
       <div class="sh-cfg__sum">
@@ -94,7 +94,7 @@
       <div class="sh-cfg__panel" data-panel="1">
         <div class="sh-bun-grid" id="bunGrid">
           <button class="sh-bun is-selected" data-bun="sesame" type="button">
-            <div class="sh-bun__media"><img src="img/image.png" alt="The Sesame" /><span class="sh-bun__badge" data-bun-badge>+1</span></div>
+            <div class="sh-bun__media"><img src="img/bun-sesame.png" alt="The Sesame" onerror="this.src='img/pain.png';" /><span class="sh-bun__badge" data-bun-badge>+1</span></div>
             <div class="sh-bun__body">
               <span class="sh-bun__tag">POPULAIRE · ★</span>
               <h3 class="sh-bun__title">THE SESAME</h3>
@@ -103,7 +103,7 @@
             </div>
           </button>
           <button class="sh-bun" data-bun="bao" type="button">
-            <div class="sh-bun__media"><img src="img/image.png" alt="The Bao" /><span class="sh-bun__badge" data-bun-badge>+1</span></div>
+            <div class="sh-bun__media"><img src="img/bun-bao.png" alt="The Bao" onerror="this.src='img/pain.png';" /><span class="sh-bun__badge" data-bun-badge>+1</span></div>
             <div class="sh-bun__body">
               <span class="sh-bun__tag">POPULAIRE · ★</span>
               <h3 class="sh-bun__title">THE BAO</h3>
@@ -112,7 +112,7 @@
             </div>
           </button>
           <button class="sh-bun" data-bun="brioche" type="button">
-            <div class="sh-bun__media"><img src="img/image.png" alt="The Brioche" /><span class="sh-bun__badge" data-bun-badge>+1</span></div>
+            <div class="sh-bun__media"><img src="img/bun-brioche.png" alt="The Brioche" onerror="this.src='img/pain.png';" /><span class="sh-bun__badge" data-bun-badge>+1</span></div>
             <div class="sh-bun__body">
               <span class="sh-bun__tag">POPULAIRE · ★</span>
               <h3 class="sh-bun__title">THE BRIOCHE</h3>
@@ -121,7 +121,7 @@
             </div>
           </button>
           <button class="sh-bun" data-bun="charcoal" type="button">
-            <div class="sh-bun__media"><img src="img/image.png" alt="The Charcoal" /><span class="sh-bun__badge" data-bun-badge>+1</span></div>
+            <div class="sh-bun__media"><img src="img/bun-charcoal.png" alt="The Charcoal" onerror="this.src='img/pain.png';" /><span class="sh-bun__badge" data-bun-badge>+1</span></div>
             <div class="sh-bun__body">
               <span class="sh-bun__tag">POPULAIRE · ★</span>
               <h3 class="sh-bun__title">THE CHARCOAL</h3>
@@ -130,7 +130,7 @@
             </div>
           </button>
           <button class="sh-bun" data-bun="potatoe" type="button">
-            <div class="sh-bun__media"><img src="img/image.png" alt="The Potatoe" /><span class="sh-bun__badge" data-bun-badge>+1</span></div>
+            <div class="sh-bun__media"><img src="img/bun-potatoe.png" alt="The Potatoe" onerror="this.src='img/pain.png';" /><span class="sh-bun__badge" data-bun-badge>+1</span></div>
             <div class="sh-bun__body">
               <span class="sh-bun__tag">POPULAIRE · ★</span>
               <h3 class="sh-bun__title">THE POTATOE</h3>
@@ -139,7 +139,7 @@
             </div>
           </button>
           <button class="sh-bun" data-bun="salad" type="button">
-            <div class="sh-bun__media"><img src="img/image.png" alt="The Salad" /><span class="sh-bun__badge" data-bun-badge>+1</span></div>
+            <div class="sh-bun__media"><img src="img/bun-salad.png" alt="The Salad" onerror="this.src='img/pain.png';" /><span class="sh-bun__badge" data-bun-badge>+1</span></div>
             <div class="sh-bun__body">
               <span class="sh-bun__tag">POPULAIRE · ★</span>
               <h3 class="sh-bun__title">THE SALAD</h3>
@@ -160,7 +160,7 @@
 
         <div class="sh-ing-grid sh-ing-grid--3" id="meatGrid">
           <button class="sh-ing" data-meat="boeuf-150" type="button">
-            <div class="sh-ing__media"><span class="sh-ing__minus" role="button" tabindex="0" data-meat-minus aria-label="Retirer une portion">−</span><img src="img/image.png" alt="" /><div class="sh-ing__head"><span class="sh-chip sh-chip--red" style="font-size:9px;padding:3px 7px;">★ POPULAIRE</span></div></div>
+            <div class="sh-ing__media"><span class="sh-ing__minus" role="button" tabindex="0" data-meat-minus aria-label="Retirer une portion">−</span><img src="img/meat-boeuf-150.png" alt="" onerror="this.src='img/image.png';" /><div class="sh-ing__head"><span class="sh-chip sh-chip--red" style="font-size:9px;padding:3px 7px;">★ POPULAIRE</span></div></div>
             <div class="sh-ing__name">BŒUF 150G</div>
             <div class="sh-ing__sub">Race Limousine · French</div>
             <div class="sh-ing__foot">
@@ -169,7 +169,7 @@
             </div>
           </button>
           <button class="sh-ing" data-meat="boeuf-100" type="button">
-            <div class="sh-ing__media"><span class="sh-ing__minus" role="button" tabindex="0" data-meat-minus aria-label="Retirer une portion">−</span><img src="img/image.png" alt="" /><div class="sh-ing__head"></div></div>
+            <div class="sh-ing__media"><span class="sh-ing__minus" role="button" tabindex="0" data-meat-minus aria-label="Retirer une portion">−</span><img src="img/meat-boeuf-100.png" alt="" onerror="this.src='img/image.png';" /><div class="sh-ing__head"></div></div>
             <div class="sh-ing__name">BŒUF 100G</div>
             <div class="sh-ing__sub">Format mini · à empiler</div>
             <div class="sh-ing__foot">
@@ -178,7 +178,7 @@
             </div>
           </button>
           <button class="sh-ing" data-meat="poulet-pane" type="button">
-            <div class="sh-ing__media"><span class="sh-ing__minus" role="button" tabindex="0" data-meat-minus aria-label="Retirer une portion">−</span><img src="img/image.png" alt="" /><div class="sh-ing__head"></div></div>
+            <div class="sh-ing__media"><span class="sh-ing__minus" role="button" tabindex="0" data-meat-minus aria-label="Retirer une portion">−</span><img src="img/meat-poulet-pane.png" alt="" onerror="this.src='img/image.png';" /><div class="sh-ing__head"></div></div>
             <div class="sh-ing__name">POULET PANÉ</div>
             <div class="sh-ing__sub">Buttermilk · maison</div>
             <div class="sh-ing__foot">
@@ -187,7 +187,7 @@
             </div>
           </button>
           <button class="sh-ing" data-meat="poulet-grille" type="button">
-            <div class="sh-ing__media"><span class="sh-ing__minus" role="button" tabindex="0" data-meat-minus aria-label="Retirer une portion">−</span><img src="img/image.png" alt="" /><div class="sh-ing__head"></div></div>
+            <div class="sh-ing__media"><span class="sh-ing__minus" role="button" tabindex="0" data-meat-minus aria-label="Retirer une portion">−</span><img src="img/meat-poulet-grille.png" alt="" onerror="this.src='img/image.png';" /><div class="sh-ing__head"></div></div>
             <div class="sh-ing__name">POULET GRILLÉ</div>
             <div class="sh-ing__sub">Mariné 24h</div>
             <div class="sh-ing__foot">
@@ -196,7 +196,7 @@
             </div>
           </button>
           <button class="sh-ing" data-meat="vege" type="button">
-            <div class="sh-ing__media"><span class="sh-ing__minus" role="button" tabindex="0" data-meat-minus aria-label="Retirer une portion">−</span><img src="img/image.png" alt="" /><div class="sh-ing__head"><span class="sh-chip sh-chip--must" style="font-size:9px;padding:3px 7px;">VEG</span></div></div>
+            <div class="sh-ing__media"><span class="sh-ing__minus" role="button" tabindex="0" data-meat-minus aria-label="Retirer une portion">−</span><img src="img/meat-vege.png" alt="" onerror="this.src='img/image.png';" /><div class="sh-ing__head"><span class="sh-chip sh-chip--must" style="font-size:9px;padding:3px 7px;">VEG</span></div></div>
             <div class="sh-ing__name">STEAK VÉGÉ</div>
             <div class="sh-ing__sub">Champignon · betterave</div>
             <div class="sh-ing__foot">
@@ -205,7 +205,7 @@
             </div>
           </button>
           <button class="sh-ing" data-meat="poisson" type="button">
-            <div class="sh-ing__media"><span class="sh-ing__minus" role="button" tabindex="0" data-meat-minus aria-label="Retirer une portion">−</span><img src="img/image.png" alt="" /><div class="sh-ing__head"></div></div>
+            <div class="sh-ing__media"><span class="sh-ing__minus" role="button" tabindex="0" data-meat-minus aria-label="Retirer une portion">−</span><img src="img/meat-poisson.png" alt="" onerror="this.src='img/image.png';" /><div class="sh-ing__head"></div></div>
             <div class="sh-ing__name">POISSON PANÉ</div>
             <div class="sh-ing__sub">Cabillaud du jour</div>
             <div class="sh-ing__foot">
@@ -239,62 +239,62 @@
 
         <div class="sh-ing-grid sh-ing-grid--4" id="topGrid">
           <button class="sh-ing" data-top="cheddar" data-color="var(--sh-mustard)" type="button">
-            <div class="sh-ing__media"><img src="img/image.png" alt="" /><div class="sh-ing__head"></div></div>
+            <div class="sh-ing__media"><img src="img/topping-cheddar.png" alt="" onerror="this.src='img/image.png';" /><div class="sh-ing__head"></div></div>
             <div class="sh-ing__name">CHEDDAR</div><div class="sh-ing__sub">Fondu</div>
             <div class="sh-ing__foot"><span class="sh-ing__price">+ 0,00 €</span></div>
           </button>
           <button class="sh-ing" data-top="bacon" data-color="var(--sh-red-deep)" type="button">
-            <div class="sh-ing__media"><img src="img/image.png" alt="" /><div class="sh-ing__head"><span class="sh-chip sh-chip--red" style="font-size:9px;padding:3px 7px;">★ POPULAIRE</span></div></div>
+            <div class="sh-ing__media"><img src="img/topping-bacon.png" alt="" onerror="this.src='img/image.png';" /><div class="sh-ing__head"><span class="sh-chip sh-chip--red" style="font-size:9px;padding:3px 7px;">★ POPULAIRE</span></div></div>
             <div class="sh-ing__name">BACON</div><div class="sh-ing__sub">Croustillant</div>
             <div class="sh-ing__foot"><span class="sh-ing__price">+ 0,00 €</span></div>
           </button>
           <button class="sh-ing" data-top="salade" data-color="var(--sh-pickle)" type="button">
-            <div class="sh-ing__media"><img src="img/image.png" alt="" /><div class="sh-ing__head"></div></div>
+            <div class="sh-ing__media"><img src="img/topping-salade.png" alt="" onerror="this.src='img/image.png';" /><div class="sh-ing__head"></div></div>
             <div class="sh-ing__name">SALADE</div><div class="sh-ing__sub">Iceberg</div>
             <div class="sh-ing__foot"><span class="sh-ing__price">+ 0,00 €</span></div>
           </button>
           <button class="sh-ing" data-top="tomate" data-color="var(--sh-red-deep)" type="button">
-            <div class="sh-ing__media"><img src="img/image.png" alt="" /><div class="sh-ing__head"></div></div>
+            <div class="sh-ing__media"><img src="img/topping-tomate.png" alt="" onerror="this.src='img/image.png';" /><div class="sh-ing__head"></div></div>
             <div class="sh-ing__name">TOMATE</div><div class="sh-ing__sub">Cœur de bœuf</div>
             <div class="sh-ing__foot"><span class="sh-ing__price">+ 0,00 €</span></div>
           </button>
           <button class="sh-ing" data-top="oignonfrit" data-color="var(--sh-mustard-deep)" type="button">
-            <div class="sh-ing__media"><img src="img/image.png" alt="" /><div class="sh-ing__head"></div></div>
+            <div class="sh-ing__media"><img src="img/topping-oignon-frit.png" alt="" onerror="this.src='img/image.png';" /><div class="sh-ing__head"></div></div>
             <div class="sh-ing__name">OIGNON FRIT</div><div class="sh-ing__sub">Croustillant</div>
             <div class="sh-ing__foot"><span class="sh-ing__price">+ 0,00 €</span></div>
           </button>
           <button class="sh-ing" data-top="oignonrouge" data-color="var(--sh-red)" type="button">
-            <div class="sh-ing__media"><img src="img/image.png" alt="" /><div class="sh-ing__head"></div></div>
+            <div class="sh-ing__media"><img src="img/topping-oignon-rouge.png" alt="" onerror="this.src='img/image.png';" /><div class="sh-ing__head"></div></div>
             <div class="sh-ing__name">OIGNON RGE</div><div class="sh-ing__sub">Cru, fines tranches</div>
             <div class="sh-ing__foot"><span class="sh-ing__price">+ 0,00 €</span></div>
           </button>
           <button class="sh-ing" data-top="pickles" data-color="var(--sh-pickle)" type="button">
-            <div class="sh-ing__media"><img src="img/image.png" alt="" /><div class="sh-ing__head"></div></div>
+            <div class="sh-ing__media"><img src="img/topping-pickles.png" alt="" onerror="this.src='img/image.png';" /><div class="sh-ing__head"></div></div>
             <div class="sh-ing__name">PICKLES</div><div class="sh-ing__sub">Croquants</div>
             <div class="sh-ing__foot"><span class="sh-ing__price">+ 0,00 €</span></div>
           </button>
           <button class="sh-ing" data-top="jalapenos" data-color="var(--sh-pickle)" type="button">
-            <div class="sh-ing__media"><img src="img/image.png" alt="" /><div class="sh-ing__head"><span class="sh-chip sh-chip--neon" style="font-size:9px;padding:3px 7px;">🌶 SPICY</span></div></div>
+            <div class="sh-ing__media"><img src="img/topping-jalapenos.png" alt="" onerror="this.src='img/image.png';" /><div class="sh-ing__head"><span class="sh-chip sh-chip--neon" style="font-size:9px;padding:3px 7px;">🌶 SPICY</span></div></div>
             <div class="sh-ing__name">JALAPEÑOS</div><div class="sh-ing__sub">Confit maison</div>
             <div class="sh-ing__foot"><span class="sh-ing__price">+ 0,00 €</span></div>
           </button>
           <button class="sh-ing" data-top="oeuf" data-color="var(--sh-mustard)" type="button">
-            <div class="sh-ing__media"><img src="img/image.png" alt="" /><div class="sh-ing__head"></div></div>
+            <div class="sh-ing__media"><img src="img/topping-oeuf.png" alt="" onerror="this.src='img/image.png';" /><div class="sh-ing__head"></div></div>
             <div class="sh-ing__name">ŒUF MIROIR</div><div class="sh-ing__sub">Bio plein air</div>
             <div class="sh-ing__foot"><span class="sh-ing__price">+ 0,00 €</span></div>
           </button>
           <button class="sh-ing" data-top="champignons" data-color="var(--sh-ink-2)" type="button">
-            <div class="sh-ing__media"><img src="img/image.png" alt="" /><div class="sh-ing__head"><span class="sh-chip sh-chip--must" style="font-size:9px;padding:3px 7px;">VEG</span></div></div>
+            <div class="sh-ing__media"><img src="img/topping-champignons.png" alt="" onerror="this.src='img/image.png';" /><div class="sh-ing__head"><span class="sh-chip sh-chip--must" style="font-size:9px;padding:3px 7px;">VEG</span></div></div>
             <div class="sh-ing__name">CHAMPIGNONS</div><div class="sh-ing__sub">Sautés à l'ail</div>
             <div class="sh-ing__foot"><span class="sh-ing__price">+ 0,00 €</span></div>
           </button>
           <button class="sh-ing" data-top="guacamole" data-color="var(--sh-pickle)" type="button">
-            <div class="sh-ing__media"><img src="img/image.png" alt="" /><div class="sh-ing__head"><span class="sh-chip sh-chip--must" style="font-size:9px;padding:3px 7px;">VEG</span></div></div>
+            <div class="sh-ing__media"><img src="img/topping-guacamole.png" alt="" onerror="this.src='img/image.png';" /><div class="sh-ing__head"><span class="sh-chip sh-chip--must" style="font-size:9px;padding:3px 7px;">VEG</span></div></div>
             <div class="sh-ing__name">GUACAMOLE</div><div class="sh-ing__sub">Avocat frais</div>
             <div class="sh-ing__foot"><span class="sh-ing__price">+ 0,00 €</span></div>
           </button>
           <button class="sh-ing" data-top="ananas" data-color="var(--sh-mustard)" type="button">
-            <div class="sh-ing__media"><img src="img/image.png" alt="" /><div class="sh-ing__head"></div></div>
+            <div class="sh-ing__media"><img src="img/topping-ananas.png" alt="" onerror="this.src='img/image.png';" /><div class="sh-ing__head"></div></div>
             <div class="sh-ing__name">ANANAS GRILLÉ</div><div class="sh-ing__sub">Saison</div>
             <div class="sh-ing__foot"><span class="sh-ing__price">+ 0,00 €</span></div>
           </button>
@@ -315,14 +315,14 @@
 
         <span class="sh-mono" style="font-size:11px;letter-spacing:.14em;display:block;margin-bottom:8px;">CHOISIS TA SAUCE (1 INCLUSE, +0,50 € APRÈS)</span>
         <div class="sh-sauce-grid" id="sauceGrid" style="margin-bottom:18px;">
-          <button class="sh-sauce is-active" data-sauce="maison" type="button"><span class="sh-sauce__thumb"><img src="img/image.png" alt="" /></span><span class="sh-sauce__name">MAISON</span></button>
-          <button class="sh-sauce" data-sauce="neon" type="button"><span class="sh-sauce__thumb"><img src="img/image.png" alt="" /></span><span class="sh-sauce__name">NEON</span><i class="fa-solid fa-fire" style="color:var(--sh-neon-pink);"></i></button>
-          <button class="sh-sauce" data-sauce="bbq" type="button"><span class="sh-sauce__thumb"><img src="img/image.png" alt="" /></span><span class="sh-sauce__name">BBQ FUMÉE</span></button>
-          <button class="sh-sauce" data-sauce="buffalo" type="button"><span class="sh-sauce__thumb"><img src="img/image.png" alt="" /></span><span class="sh-sauce__name">BUFFALO</span></button>
-          <button class="sh-sauce" data-sauce="aioli" type="button"><span class="sh-sauce__thumb"><img src="img/image.png" alt="" /></span><span class="sh-sauce__name">AÏOLI</span></button>
-          <button class="sh-sauce" data-sauce="moutarde" type="button"><span class="sh-sauce__thumb"><img src="img/image.png" alt="" /></span><span class="sh-sauce__name">MOUTARDE</span></button>
-          <button class="sh-sauce" data-sauce="tartare" type="button"><span class="sh-sauce__thumb"><img src="img/image.png" alt="" /></span><span class="sh-sauce__name">TARTARE</span></button>
-          <button class="sh-sauce" data-sauce="vegan" type="button"><span class="sh-sauce__thumb"><img src="img/image.png" alt="" /></span><span class="sh-sauce__name">VEGAN</span></button>
+          <button class="sh-sauce is-active" data-sauce="maison" type="button"><span class="sh-sauce__thumb"><img src="img/maisonsauce.png" alt="" /></span><span class="sh-sauce__name">MAISON</span></button>
+          <button class="sh-sauce" data-sauce="neon" type="button"><span class="sh-sauce__thumb"><img src="img/hotsauce.png" alt="" /></span><span class="sh-sauce__name">NEON</span><i class="fa-solid fa-fire" style="color:var(--sh-neon-pink);"></i></button>
+          <button class="sh-sauce" data-sauce="bbq" type="button"><span class="sh-sauce__thumb"><img src="img/bbqsauce.png" alt="" /></span><span class="sh-sauce__name">BBQ FUMÉE</span></button>
+          <button class="sh-sauce" data-sauce="buffalo" type="button"><span class="sh-sauce__thumb"><img src="img/buffalosauce.webp" alt="" /></span><span class="sh-sauce__name">BUFFALO</span></button>
+          <button class="sh-sauce" data-sauce="aioli" type="button"><span class="sh-sauce__thumb"><img src="img/sauce-aioli.png" alt="" onerror="this.src='img/maisonsauce.png';" /></span><span class="sh-sauce__name">AÏOLI</span></button>
+          <button class="sh-sauce" data-sauce="moutarde" type="button"><span class="sh-sauce__thumb"><img src="img/sauce-moutarde.png" alt="" onerror="this.src='img/maisonsauce.png';" /></span><span class="sh-sauce__name">MOUTARDE</span></button>
+          <button class="sh-sauce" data-sauce="tartare" type="button"><span class="sh-sauce__thumb"><img src="img/sauce-tartare.png" alt="" onerror="this.src='img/maisonsauce.png';" /></span><span class="sh-sauce__name">TARTARE</span></button>
+          <button class="sh-sauce" data-sauce="vegan" type="button"><span class="sh-sauce__thumb"><img src="img/sauce-vegan.png" alt="" onerror="this.src='img/maisonsauce.png';" /></span><span class="sh-sauce__name">VEGAN</span></button>
         </div>
 
         <span class="sh-mono" style="font-size:11px;letter-spacing:.14em;display:block;margin-bottom:8px;">NOMME TON BURGER (OPTIONNEL)</span>
@@ -364,5 +364,6 @@
 
 <script src="js/nav.js" defer></script>
 <script src="js/configurator.js" defer></script>
+<script src="js/contact.js" defer></script>
 </body>
 </html>

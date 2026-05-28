@@ -38,40 +38,62 @@
 
           <div style="margin-top:16px;">
             <span class="sh-mono" style="font-size:11px;letter-spacing:.14em;display:block;margin-bottom:6px;">MODE</span>
-            <div class="sh-mode">
-              <button type="button" class="is-active"><i class="fa-solid fa-truck-fast"></i> LIVRAISON</button>
-              <button type="button"><i class="fa-solid fa-shop"></i> CLICK &amp; COLLECT</button>
+            <div class="sh-mode" data-mode-toggle>
+              <button type="button" class="is-active" data-mode="delivery"><i class="fa-solid fa-truck-fast"></i> LIVRAISON</button>
+              <button type="button" data-mode="pickup"><i class="fa-solid fa-shop"></i> CLICK &amp; COLLECT</button>
             </div>
           </div>
 
           <form class="sh-locator__form" data-locator-form style="margin-top:16px;">
-            <label class="sh-label" for="locatorAddress">Adresse</label>
-            <div style="position:relative;">
-              <input id="locatorAddress" class="sh-input" placeholder="Entre ton adresse de livraison" style="padding-left:44px;padding-right:56px;font-size:16px;" autocomplete="street-address" required />
-              <i class="fa-solid fa-location-dot" style="position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--sh-red);"></i>
-              <span class="sh-chip sh-chip--ink" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);">↵</span>
-            </div>
-            <p class="sh-inline-ok" style="margin-top:10px;"><i class="fa-solid fa-check"></i> ZONE OK · LIVRÉ EN 22 MIN · SHIFT DISPO MAINTENANT</p>
+            <!-- BLOC LIVRAISON -->
+            <div data-mode-panel="delivery">
+              <label class="sh-label" for="locatorAddress">Adresse</label>
+              <div style="position:relative;">
+                <input id="locatorAddress" class="sh-input" placeholder="Entre ton adresse de livraison" style="padding-left:44px;padding-right:56px;font-size:16px;" autocomplete="street-address" />
+                <i class="fa-solid fa-location-dot" style="position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--sh-red);"></i>
+                <span class="sh-chip sh-chip--ink" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);">↵</span>
+              </div>
+              <p class="sh-inline-ok" style="margin-top:10px;"><i class="fa-solid fa-check"></i> ZONE OK · LIVRÉ EN 22 MIN · SHIFT DISPO MAINTENANT</p>
 
-            <div style="margin-top:12px;">
-              <span class="sh-mono" style="font-size:10px;letter-spacing:.14em;color:var(--sh-text-muted);">SUGGESTIONS</span>
-              <div style="display:flex;flex-direction:column;gap:6px;margin-top:6px;">
-                <button type="button" class="sh-locator__sugg" data-sugg="12 rue Mercière, 69002 Lyon">
-                  <span><i class="fa-regular fa-clock"></i> Domicile · 12 rue Mercière, 69002</span>
-                  <span class="sh-mono">22 min</span>
-                </button>
-                <button type="button" class="sh-locator__sugg" data-sugg="88 quai Perrache, 69002 Lyon">
-                  <span><i class="fa-regular fa-clock"></i> Boulot · 88 quai Perrache, 69002</span>
-                  <span class="sh-mono">18 min</span>
-                </button>
-                <button type="button" class="sh-locator__sugg" data-sugg="Place Bellecour, 69002 Lyon">
-                  <span><i class="fa-regular fa-clock"></i> Place Bellecour, 69002</span>
-                  <span class="sh-mono">24 min</span>
-                </button>
+              <div style="margin-top:12px;">
+                <span class="sh-mono" style="font-size:10px;letter-spacing:.14em;color:var(--sh-text-muted);">SUGGESTIONS</span>
+                <div style="display:flex;flex-direction:column;gap:6px;margin-top:6px;">
+                  <button type="button" class="sh-locator__sugg" data-sugg="24 rue Paul Bert, 69003 Lyon">
+                    <span><i class="fa-regular fa-clock"></i> Domicile · 24 rue Paul Bert, 69003</span>
+                    <span class="sh-mono">20 min</span>
+                  </button>
+                  <button type="button" class="sh-locator__sugg" data-sugg="88 quai Perrache, 69002 Lyon">
+                    <span><i class="fa-regular fa-clock"></i> Boulot · 88 quai Perrache, 69002</span>
+                    <span class="sh-mono">18 min</span>
+                  </button>
+                  <button type="button" class="sh-locator__sugg" data-sugg="Place Bellecour, 69002 Lyon">
+                    <span><i class="fa-regular fa-clock"></i> Place Bellecour, 69002</span>
+                    <span class="sh-mono">24 min</span>
+                  </button>
+                </div>
               </div>
             </div>
 
-            <button type="submit" class="sh-btn sh-btn--primary sh-btn--block" style="margin-top:14px;padding:12px 20px;font-size:14px;">CONTINUER <i class="fa-solid fa-arrow-right"></i></button>
+            <!-- BLOC CLICK & COLLECT -->
+            <div data-mode-panel="pickup" hidden>
+              <span class="sh-mono" style="font-size:11px;letter-spacing:.14em;display:block;margin-bottom:8px;color:var(--sh-text-muted);">ADRESSE DU RESTAURANT</span>
+              <div class="sh-card sh-resto-card">
+                <div class="sh-resto-card__icon"><i class="fa-solid fa-shop"></i></div>
+                <div class="sh-resto-card__body">
+                  <span class="sh-mono" style="font-size:10px;letter-spacing:.16em;color:var(--sh-text-muted);">STACK HOUSE · LE DINER</span>
+                  <h3 style="font-family:var(--sh-font-display);font-size:22px;margin:4px 0 0;line-height:1;">8 RUE D'ALGÉRIE</h3>
+                  <p style="font-size:13px;margin:4px 0 0;color:var(--sh-text-muted);">69001 LYON · M° HÔTEL DE VILLE</p>
+                  <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;">
+                    <span class="sh-chip sh-chip--must" style="font-size:10px;"><i class="fa-regular fa-clock"></i> PRÊT EN 15 MIN</span>
+                    <span class="sh-chip" style="font-size:10px;">11h30 → 23h00</span>
+                  </div>
+                </div>
+              </div>
+              <p class="sh-inline-ok" style="margin-top:10px;"><i class="fa-solid fa-check"></i> RETRAIT SUR PLACE · 0 € FRAIS · PAS DE FILE</p>
+              <a href="https://maps.google.com/?q=8+rue+d%27Alg%C3%A9rie+69001+Lyon" target="_blank" rel="noopener" class="sh-btn sh-btn--ghost sh-btn--sm" style="margin-top:10px;"><i class="fa-solid fa-diamond-turn-right"></i> ITINÉRAIRE</a>
+            </div>
+
+            <button type="submit" class="sh-btn sh-btn--primary sh-btn--block" style="margin-top:14px;padding:12px 20px;font-size:14px;" data-locator-submit>CONTINUER <i class="fa-solid fa-arrow-right"></i></button>
           </form>
         </div>
 
@@ -94,25 +116,25 @@
     <div class="sh-locator__backdrop" data-zone-close></div>
     <div class="sh-locator__card sh-card" role="document">
       <div class="sh-locator__head">
-        <span class="sh-mono" style="font-size:11px;letter-spacing:.18em;color:var(--sh-success);">★ ZONE OK · ON LIVRE CHEZ TOI</span>
+        <span class="sh-mono" data-ok-banner style="font-size:11px;letter-spacing:.18em;color:var(--sh-success);">★ ZONE OK · ON LIVRE CHEZ TOI</span>
         <button type="button" class="sh-modal__close" data-zone-close aria-label="Fermer"><i class="fa-solid fa-xmark"></i></button>
       </div>
 
       <div class="sh-zonebox">
         <div class="sh-zonebox__left">
-          <h2 id="zoneOkTitle" style="font-family:var(--sh-font-display);font-size:clamp(26px,3.4vw,38px);line-height:.98;margin:0;">PARFAIT.<br/><span style="color:var(--sh-red)">22 MIN</span><br/>ET T'ES SERVI.</h2>
-          <p style="font-size:15px;color:var(--sh-text-muted);margin-top:14px;max-width:380px;">
-            On t'a localisé : <b id="zoneOkAddress" style="color:var(--sh-ink)">12 rue Mercière, 69002 Lyon</b>. Livraison estimée en 22 min — un livreur est dispo maintenant.
+          <h2 id="zoneOkTitle" data-ok-title style="font-family:var(--sh-font-display);font-size:clamp(26px,3.4vw,38px);line-height:.98;margin:0;">PARFAIT.<br/><span style="color:var(--sh-red)">22 MIN</span><br/>ET T'ES SERVI.</h2>
+          <p data-ok-lede style="font-size:15px;color:var(--sh-text-muted);margin-top:14px;max-width:380px;">
+            On t'a localisé : <b id="zoneOkAddress" style="color:var(--sh-ink)">24 rue Paul Bert, 69003 Lyon</b>. Livraison estimée en 22 min — un livreur est dispo maintenant.
           </p>
 
           <div class="sh-card" style="padding:16px;margin-top:22px;background:var(--sh-mustard);">
             <div style="display:flex;justify-content:space-between;align-items:start;gap:16px;">
               <div>
-                <span class="sh-mono" style="font-size:10px;letter-spacing:.18em;">LIVRAISON</span>
-                <div style="font-family:var(--sh-font-display);font-size:24px;margin-top:6px;">22 MIN · GRATUITE DÈS 25 €</div>
-                <div style="font-size:13px;margin-top:4px;">Shift ouvert jusqu'à 22h45 · 2,90 € en dessous</div>
+                <span class="sh-mono" data-ok-kicker style="font-size:10px;letter-spacing:.18em;">LIVRAISON</span>
+                <div class="sh-display" data-ok-headline style="font-family:var(--sh-font-display);font-size:24px;margin-top:6px;">22 MIN · GRATUITE DÈS 25 €</div>
+                <div data-ok-sub style="font-size:13px;margin-top:4px;">Shift ouvert jusqu'à 22h45 · 2,90 € en dessous</div>
               </div>
-              <div style="width:56px;height:56px;border-radius:12px;background:var(--sh-ink);color:var(--sh-cream);display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;">
+              <div style="width:56px;height:56px;border-radius:12px;background:var(--sh-ink);color:var(--sh-cream);display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;" data-ok-icon>
                 <i class="fa-solid fa-truck-fast"></i>
               </div>
             </div>
@@ -122,7 +144,7 @@
           <button type="button" class="sh-btn sh-btn--ghost sh-btn--block" data-zone-close style="margin-top:8px;font-size:13px;">CONTINUER SUR LE SITE</button>
         </div>
 
-        <div class="sh-zonebox__right">
+        <div class="sh-zonebox__right" data-ok-right-delivery>
           <img src="img/image.png" alt="Carte de la zone de livraison Lyon" />
           <div class="sh-card sh-zonebox__zonecard">
             <div style="padding:14px;">
@@ -131,6 +153,19 @@
               <div class="sh-mono" style="font-size:11px;margin-top:6px;">Rayon 3,2 km depuis le diner · 11h30→22h45</div>
             </div>
           </div>
+        </div>
+
+        <div class="sh-zonebox__ko-right" data-ok-right-pickup hidden style="background:var(--sh-mustard);color:var(--sh-ink);">
+          <span class="sh-tag" style="color:var(--sh-red);">LE DINER</span>
+          <h3 style="font-family:var(--sh-font-display);font-size:32px;margin:6px 0 0;color:var(--sh-ink);">8 RUE<br/>D'ALGÉRIE</h3>
+          <p class="sh-mono" style="font-size:12px;margin:8px 0 0;letter-spacing:.14em;opacity:.85;">69001 LYON · M° HÔTEL DE VILLE</p>
+          <div style="margin-top:20px;display:grid;grid-template-columns:repeat(2,1fr);gap:10px;">
+            <div class="sh-zonebox__ko-stat" style="border-color:var(--sh-ink);"><span class="lbl" style="color:var(--sh-ink);">PRÊT EN</span><div class="v" style="color:var(--sh-ink);">15 min</div></div>
+            <div class="sh-zonebox__ko-stat" style="border-color:var(--sh-ink);"><span class="lbl" style="color:var(--sh-ink);">FRAIS</span><div class="v" style="color:var(--sh-ink);">0 €</div></div>
+            <div class="sh-zonebox__ko-stat" style="border-color:var(--sh-ink);"><span class="lbl" style="color:var(--sh-ink);">OUVERT</span><div class="v" style="color:var(--sh-ink);">23h00</div></div>
+            <div class="sh-zonebox__ko-stat" style="border-color:var(--sh-ink);"><span class="lbl" style="color:var(--sh-ink);">MODE</span><div class="v" style="color:var(--sh-ink);">RETRAIT</div></div>
+          </div>
+          <a href="https://maps.google.com/?q=8+rue+d%27Alg%C3%A9rie+69001+Lyon" target="_blank" rel="noopener" class="sh-btn sh-btn--ink sh-btn--block" style="margin-top:18px;"><i class="fa-solid fa-diamond-turn-right"></i> ITINÉRAIRE</a>
         </div>
       </div>
     </div>
@@ -174,8 +209,8 @@
 
         <div class="sh-zonebox__ko-right">
           <span class="sh-tag" style="color:var(--sh-mustard);">LE DINER</span>
-          <h3 style="font-family:var(--sh-font-display);font-size:32px;margin:6px 0 0;color:var(--sh-cream);">12 RUE<br/>MERCIÈRE</h3>
-          <p class="sh-mono" style="font-size:12px;margin:8px 0 0;letter-spacing:.14em;opacity:.9;">69002 LYON · M° CORDELIERS</p>
+          <h3 style="font-family:var(--sh-font-display);font-size:32px;margin:6px 0 0;color:var(--sh-cream);">8 RUE<br/>D'ALGÉRIE</h3>
+          <p class="sh-mono" style="font-size:12px;margin:8px 0 0;letter-spacing:.14em;opacity:.9;">69001 LYON · M° HÔTEL DE VILLE</p>
 
           <div style="margin-top:20px;display:grid;grid-template-columns:repeat(2,1fr);gap:10px;">
             <div class="sh-zonebox__ko-stat"><span class="lbl">DISTANCE</span><div class="v">8 min</div><span class="sub">métro A</span></div>
@@ -185,6 +220,18 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- ════════ BANDEAU PROMO (mise en avant commerciale) ════════ -->
+  <div class="sh-promo-strip" role="region" aria-label="Offre commerciale">
+    <div class="sh-promo-strip__inner">
+      <span class="sh-promo-strip__badge">★ HAPPY HOUR</span>
+      <span class="sh-promo-strip__text">
+        <b>17H → 19H</b> · -20% sur tous les <b>SIDES &amp; DRINKS</b>
+        <span class="sh-promo-strip__sub">· tous les jours, code auto au panier</span>
+      </span>
+      <a href="menu.html" class="sh-promo-strip__cta">JE FONCE <i class="fa-solid fa-arrow-right"></i></a>
     </div>
   </div>
 
@@ -200,9 +247,9 @@
       </a>
 
       <div class="sh-nav__cta">
-        <span class="sh-chip sh-chip--must sh-nav__cta-zone">
-          <i class="fa-solid fa-location-dot" aria-hidden="true"></i> 69002 LYON · 22 MIN
-        </span>
+        <button type="button" class="sh-contact-trigger sh-nav__cta-zone" aria-label="Ouvrir le contact">
+          <i class="fa-regular fa-envelope" aria-hidden="true"></i> CONTACT
+        </button>
         <a href="compte.html" class="sh-btn sh-btn--sm sh-nav__cta-account" style="background:transparent;color:var(--sh-cream);border-color:var(--sh-cream);">
           <i class="fa-regular fa-user" aria-hidden="true"></i> COMPTE
         </a>
@@ -246,7 +293,7 @@
       <!-- Burger vignette -->
       <div class="sh-hero__visual" aria-hidden="true">
         <div class="sh-hero__disc">
-          <img src="img/image.png" alt="" class="sh-hero__photo" />
+          <img src="img/burger-hero.png" alt="" class="sh-hero__photo" onerror="this.src='img/image.png';" />
           <div class="sh-hero__sticker" aria-hidden="true">TOUT<br/>EST<br/>INCLUS<br/>★</div>
           <span class="sh-chip sh-chip--must sh-hero__badge sh-hero__badge--tl">★ HOUSE SPECIAL</span>
           <span class="sh-chip sh-chip--neon sh-hero__badge sh-hero__badge--br">14,90 € · TOUT COMPRIS</span>
@@ -349,7 +396,7 @@
       <div class="sh-pgrid sh-pgrid--4">
         <article class="sh-pcard">
           <div class="sh-pcard__media">
-            <img src="img/image.png" alt="The Stack — triple steak burger" />
+            <img src="img/burger-stack.png" alt="The Stack — triple steak burger" onerror="this.src='img/image.png';" />
             <span class="sh-pcard__badge">★ #1</span>
           </div>
           <div class="sh-pcard__body">
@@ -364,7 +411,7 @@
         </article>
         <article class="sh-pcard">
           <div class="sh-pcard__media">
-            <img src="img/image.png" alt="The Birdie — poulet burger" />
+            <img src="img/burger-birdie.png" alt="The Birdie — poulet burger" onerror="this.src='img/image.png';" />
           </div>
           <div class="sh-pcard__body">
             <span class="sh-pcard__tag">CLUB</span>
@@ -378,7 +425,7 @@
         </article>
         <article class="sh-pcard sh-pcard--fries">
           <div class="sh-pcard__media">
-            <img src="img/image.png" alt="The Green — burger veggie" />
+            <img src="img/burger-green.png" alt="The Green — burger veggie" onerror="this.src='img/image.png';" />
           </div>
           <div class="sh-pcard__body">
             <span class="sh-pcard__tag">VEGGIE</span>
@@ -392,7 +439,7 @@
         </article>
         <article class="sh-pcard sh-pcard--drink">
           <div class="sh-pcard__media">
-            <img src="img/image.png" alt="The Wave — burger poisson" />
+            <img src="img/burger-wave.png" alt="The Wave — burger poisson" onerror="this.src='img/image.png';" />
           </div>
           <div class="sh-pcard__body">
             <span class="sh-pcard__tag">FISH</span>
@@ -442,8 +489,8 @@
       <div>
         <h4>LE DINER</h4>
         <ul>
-          <li>12 rue Mercière</li>
-          <li>69002 Lyon</li>
+          <li>8 rue d'Algérie</li>
+          <li>69001 Lyon</li>
           <li>11h30 → 23h00</li>
           <li>Tous les jours</li>
         </ul>
@@ -477,5 +524,6 @@
   <script src="js/nav.js" defer></script>
   <script src="js/reveal.js" defer></script>
   <script src="js/locator.js" defer></script>
+  <script src="js/contact.js" defer></script>
 </body>
 </html>
