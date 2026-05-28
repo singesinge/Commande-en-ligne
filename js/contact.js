@@ -20,13 +20,6 @@
         <p style="font-size:13px;color:var(--sh-text-muted);margin:10px 0 22px;">On répond vite — souvent dans l'heure pendant le service.</p>
 
         <div class="sh-contact-list">
-          <a href="mailto:hello@stackhouse.fr" class="sh-contact-item">
-            <span class="sh-contact-item__icon"><i class="fa-regular fa-envelope"></i></span>
-            <span class="sh-contact-item__body">
-              <span class="sh-mono" style="font-size:10px;letter-spacing:.16em;color:var(--sh-text-muted);">EMAIL</span>
-              <span class="sh-contact-item__v">hello@stackhouse.fr</span>
-            </span>
-          </a>
           <a href="tel:+33478000000" class="sh-contact-item">
             <span class="sh-contact-item__icon"><i class="fa-solid fa-phone"></i></span>
             <span class="sh-contact-item__body">
